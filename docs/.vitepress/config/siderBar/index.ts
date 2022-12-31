@@ -14,7 +14,21 @@ function sidebarDatabase() {
     }
   ]
 }
+
+function sidebarJava() {
+  return [
+    {
+      text: 'Java',
+      items: [{ text: 'java基础', link: '/java/java-base' }]
+    },
+    {
+      text: 'Spring全家桶',
+      items: [{ text: 'Spring Security ➕ JWT', link: '/java/spring-security-jwt' }]
+    }
+  ]
+}
 export default {
   '/guide/': sidebarGuide(),
-  '/database/': sidebarDatabase()
+  '/database/': sidebarDatabase(),
+  '/java/': sidebarJava()
 }
