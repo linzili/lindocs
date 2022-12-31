@@ -7,7 +7,7 @@ jobs:
   algolia:
     runs-on: ubuntu-latest
     steps:
-      - name: Sleep for 30 seconds
+      - name: Sleep for 60 seconds
         run: sleep 60s
         shell: bash
 
