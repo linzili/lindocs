@@ -31,13 +31,13 @@
 
 在电脑上安装了数据库管理系统后，就可以通过数据库管理系统创建数据库来存储数据，也可以通过该系统对数据库中的数据进行数据的增删改查相关的操作。我们平时说的 MySQL 数据库其实是 MySQL 数据库管理系统。
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721185923635.png" alt="image-20210721185923635" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721185923635.png" alt="image-20210721185923635" style="zoom:80%;" />
 
 通过上面的描述，大家应该已经知道了 `数据库管理系统` 和 `数据库` 的关系。那么有有哪些常见的数据库管理系统呢？
 
 ### 1.3 常见的数据库管理系统
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721184354001.png" alt="image-20210721184354001" style="zoom:70%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721184354001.png" alt="image-20210721184354001" style="zoom:70%;" />
 
 接下来对上面列举的数据库管理系统进行简单的介绍：
 
@@ -51,7 +51,7 @@
 
 我们课程上学习的是 MySQL 数据库管理系统，PostgreSQL 在一些公司也有使用，此时大家肯定会想以后在公司中如果使用我们没有学习过程的 PostgreSQL 数据库管理系统怎么办？这点大家大可不必担心，如下图所示：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721185303106.png" alt="image-20210721185303106" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721185303106.png" alt="image-20210721185303106" style="zoom:80%;" />
 
 我们可以通过数据库管理系统操作数据库，对数据库中的数据进行增删改查操作，而怎么样让用户跟数据库管理系统打交道呢？就可以通过一门编程语言（SQL）来实现。
 
@@ -73,15 +73,15 @@ https://downloads.mysql.com/archives/community/
 
 点开上面的链接就能看到如下界面：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210404200055449.png" alt="image-20210404200055449" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210404200055449.png" alt="image-20210404200055449" style="zoom:80%;" />
 
 选择选择和自己**系统位数**相对应的版本点击右边的`Download`，此时会进到另一个页面，同样在接近页面底部的地方找到如下图所示的位置：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/1556823-20181220194715840-436169502.png" alt="img" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/1556823-20181220194715840-436169502.png" alt="img" style="zoom:80%;" />
 
 不用理会上面的登录和注册按钮，直接点击 `No thanks, just start my download.` 就可以下载。
 
-![image-20201109134805641](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109134805641.png)
+![image-20201109134805641](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109134805641.png)
 
 #### 2.1.2 安装(解压)
 
@@ -89,7 +89,7 @@ https://downloads.mysql.com/archives/community/
 
 ---
 
-![image-20201109134948046](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109134948046.png)
+![image-20201109134948046](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109134948046.png)
 
 ### 2.2 MySQL 卸载
 
@@ -103,7 +103,7 @@ https://downloads.mysql.com/archives/community/
 net stop mysql
 ```
 
-![img](https://gitee.com/lin-zili/markdown-picture/raw/master/images/1556823-20181220222924783-57600848.png)
+![img](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/1556823-20181220222924783-57600848.png)
 
 2. 再敲入`mysqld -remove mysql`，回车。
 
@@ -111,7 +111,7 @@ net stop mysql
 mysqld -remove mysql
 ```
 
-![img](https://gitee.com/lin-zili/markdown-picture/raw/master/images/1556823-20181220223025128-587235464.png)
+![img](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/1556823-20181220223025128-587235464.png)
 
 3. 最后删除 MySQL 目录及相关的环境变量。
 
@@ -126,23 +126,23 @@ mysqld -remove mysql
 
 右键`此电脑`→`属性`，点击`高级系统设置`
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/1556823-20181220220242472-524708778.png" alt="img" style="zoom:90%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/1556823-20181220220242472-524708778.png" alt="img" style="zoom:90%;" />
 
 点击`环境变量`
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/1556823-20181220220359609-736422950.png" alt="img" style="zoom:90%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/1556823-20181220220359609-736422950.png" alt="img" style="zoom:90%;" />
 
 在`系统变量`中新建 MYSQL_HOME
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109140222488.png" alt="image-20201109140222488" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109140222488.png" alt="image-20201109140222488" style="zoom:80%;" />
 
 在`系统变量`中找到并**双击**`Path`
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/1556823-20181220220551145-1198958872.png" alt="img" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/1556823-20181220220551145-1198958872.png" alt="img" style="zoom:80%;" />
 
 点击`新建`
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109135248104.png" alt="image-20201109135248104" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109135248104.png" alt="image-20201109135248104" style="zoom:80%;" />
 
 最后点击确定。
 
@@ -168,9 +168,9 @@ sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_
 
 把上面的文本文件另存为，在保存类型里选`所有文件 (*.*)`，文件名叫`my.ini`，存放的路径为 MySQL 的`根目录`(例如我的是`D:\software\mysql-5.7.24-winx64`,根据自己的 MySQL 目录位置修改)。
 
-![image-20201109142704951](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109142704951.png)
+![image-20201109142704951](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109142704951.png)
 
-![image-20201109142737584](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109142737584.png)
+![image-20201109142737584](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109142737584.png)
 
 上面代码意思就是配置数据库的默认编码集为 utf-8 和默认存储引擎为 INNODB。
 
@@ -182,17 +182,17 @@ sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_
 mysqld --initialize-insecure
 ```
 
-![image-20201109140955772](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109140955772.png)
+![image-20201109140955772](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109140955772.png)
 
 tips：如果出现如下错误
 
-![image-20201109135848054](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109135848054.png)
+![image-20201109135848054](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109135848054.png)
 
 是由于权限不足导致的，去`C:\Windows\System32` 下以管理员方式运行 cmd.exe
 
-![image-20201109140423691](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109140423691.png)
+![image-20201109140423691](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109140423691.png)
 
-![image-20201109140001186](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109140001186.png)
+![image-20201109140001186](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109140001186.png)
 
 #### 2.3.4 注册 MySQL 服务
 
@@ -202,7 +202,7 @@ tips：如果出现如下错误
 mysqld -install
 ```
 
-![image-20201109141325810](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20201109141325810.png)
+![image-20201109141325810](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20201109141325810.png)
 
 现在你的计算机上已经安装好了 MySQL 服务了。
 
@@ -218,7 +218,7 @@ net start mysql  // 启动mysql服务
 net stop mysql  // 停止mysql服务
 ```
 
-![img](https://gitee.com/lin-zili/markdown-picture/raw/master/images/1556823-20181221093036851-1317238155.png)
+![img](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/1556823-20181221093036851-1317238155.png)
 
 #### 2.3.6 修改默认账户密码
 
@@ -228,7 +228,7 @@ net stop mysql  // 停止mysql服务
 mysqladmin -u root password 1234
 ```
 
-![img](https://gitee.com/lin-zili/markdown-picture/raw/master/images/1556823-20181221093251250-819416425.png)
+![img](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/1556823-20181221093251250-819416425.png)
 
 **至此，MySQL 5.7 解压版安装完毕！**
 
@@ -243,7 +243,7 @@ mysqladmin -u root password 1234
 mysql -uroot -p1234
 ```
 
-![img](https://gitee.com/lin-zili/markdown-picture/raw/master/images/1556823-20181220222422178-61579658.png)
+![img](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/1556823-20181220222422178-61579658.png)
 
 **到这里你就可以开始你的 MySQL 之旅了！**
 
@@ -270,7 +270,7 @@ quit
 
 如下图，`订单信息表` 和 `客户信息表` 都是有行有列二维表我们将这样的称为关系型数据库。
 
-![image-20210721205130231](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721205130231.png)
+![image-20210721205130231](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721205130231.png)
 
 接下来看关系型数据库的优点：
 
@@ -282,17 +282,17 @@ quit
 
 **数据模型：**
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721212754568.png" alt="image-20210721212754568" style="zoom:70%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721212754568.png" alt="image-20210721212754568" style="zoom:70%;" />
 
 如上图，我们通过客户端可以通过数据库管理系统创建数据库，在数据库中创建表，在表中添加数据。创建的每一个数据库对应到磁盘上都是一个文件夹。比如可以通过 SQL 语句创建一个数据库（数据库名称为 db1），语句如下。该语句咱们后面会学习。
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721213349761.png" alt="image-20210721213349761" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721213349761.png" alt="image-20210721213349761" style="zoom:80%;" />
 
 我们可以在数据库安装目录下的 data 目录下看到多了一个 `db1` 的文件夹。所以，**在 MySQL 中一个数据库对应到磁盘上的一个文件夹。**
 
 而一个数据库下可以创建多张表，我们到 MySQL 中自带的 mysql 数据库的文件夹目录下：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721214029913.png" alt="image-20210721214029913" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721214029913.png" alt="image-20210721214029913" style="zoom:80%;" />
 
 而上图中右边的 `db.frm` 是表文件，`db.MYD` 是数据文件，通过这两个文件就可以查询到数据展示成二维表的效果。
 
@@ -317,7 +317,7 @@ quit
 
 - SQL 语句可以单行或多行书写，以分号结尾。
 
-  <img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721215223872.png" alt="image-20210721215223872" style="zoom:80%;" />
+  <img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721215223872.png" alt="image-20210721215223872" style="zoom:80%;" />
 
   如上，以分号结尾才是一个完整的 sql 语句。
 
@@ -325,15 +325,15 @@ quit
 
   同样的一条 sql 语句写成下图的样子，一样可以运行处结果。
 
-  <img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721215328410.png" alt="image-20210721215328410" style="zoom:80%;" />
+  <img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721215328410.png" alt="image-20210721215328410" style="zoom:80%;" />
 
 - 注释
 
   - 单行注释: -- 注释内容 或 #注释内容(MySQL 特有)
 
-    <img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721215517293.png" alt="image-20210721215517293" style="zoom:80%;" />
+    <img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721215517293.png" alt="image-20210721215517293" style="zoom:80%;" />
 
-    <img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721215556885.png" alt="image-20210721215556885" style="zoom:80%;" />
+    <img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721215556885.png" alt="image-20210721215556885" style="zoom:80%;" />
 
     > 注意：使用-- 添加单行注释时，--后面一定要加空格，而#没有要求。
 
@@ -345,13 +345,13 @@ quit
 
   DDL 简单理解就是用来操作数据库，表等
 
-  <img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721220032047.png" alt="image-20210721220032047" style="zoom:60%;" />
+  <img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721220032047.png" alt="image-20210721220032047" style="zoom:60%;" />
 
 - DML(Data Manipulation Language) 数据操作语言，用来对数据库中表的数据进行增删改
 
   DML 简单理解就对表中数据进行增删改
 
-  <img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721220132919.png" alt="image-20210721220132919" style="zoom:60%;" />
+  <img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721220132919.png" alt="image-20210721220132919" style="zoom:60%;" />
 
 - DQL(Data Query Language) 数据查询语言，用来查询数据库中表的记录(数据)
 
@@ -377,7 +377,7 @@ SHOW DATABASES;
 
 运行上面语句效果如下：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721221107014.png" alt="image-20210721221107014" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721221107014.png" alt="image-20210721221107014" style="zoom:80%;" />
 
 上述查询到的是的这些数据库是 mysql 安装好自带的数据库，我们以后不要操作这些数据库。
 
@@ -391,11 +391,11 @@ CREATE DATABASE 数据库名称;
 
 运行语句效果如下：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721223450755.png" alt="image-20210721223450755" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721223450755.png" alt="image-20210721223450755" style="zoom:80%;" />
 
 而在创建数据库的时候，我并不知道 db1 数据库有没有创建，直接再次创建名为 db1 的数据库就会出现错误。
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721223745490.png" alt="image-20210721223745490" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721223745490.png" alt="image-20210721223745490" style="zoom:80%;" />
 
 为了避免上面的错误，在创建数据库的时候先做判断，如果不存在再创建。
 
@@ -407,7 +407,7 @@ CREATE DATABASE IF NOT EXISTS 数据库名称;
 
 运行语句效果如下：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721224056476.png" alt="image-20210721224056476" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721224056476.png" alt="image-20210721224056476" style="zoom:80%;" />
 
 从上面的效果可以看到虽然 db1 数据库已经存在，再创建 db1 也没有报错，而创建 db2 数据库则创建成功。
 
@@ -427,7 +427,7 @@ DROP DATABASE IF EXISTS 数据库名称;
 
 运行语句效果如下：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721224435251.png" alt="image-20210721224435251" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721224435251.png" alt="image-20210721224435251" style="zoom:80%;" />
 
 ### 4.4 使用数据库
 
@@ -447,7 +447,7 @@ SELECT DATABASE();
 
 运行语句效果如下：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721224720841.png" alt="image-20210721224720841" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721224720841.png" alt="image-20210721224720841" style="zoom:80%;" />
 
 ## 5，DDL:操作表
 
@@ -463,7 +463,7 @@ SHOW TABLES;
 
 我们创建的数据库中没有任何表，因此我们进入 mysql 自带的 mysql 数据库，执行上述语句查看
 
-![image-20210721230202814](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721230202814.png)
+![image-20210721230202814](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721230202814.png)
 
 - **查询表结构**
 
@@ -473,7 +473,7 @@ DESC 表名称;
 
 查看 mysql 数据库中 func 表的结构，运行语句如下：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721230332428.png" alt="image-20210721230332428" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721230332428.png" alt="image-20210721230332428" style="zoom:80%;" />
 
 ### 5.2 创建表
 
@@ -493,7 +493,7 @@ CREATE TABLE 表名 (
 
 知道了创建表的语句，那么我们创建创建如下结构的表
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721230824097.png" alt="image-20210721230824097" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721230824097.png" alt="image-20210721230824097" style="zoom:80%;" />
 
 ```sql
 create table tb_user (
@@ -505,7 +505,7 @@ create table tb_user (
 
 运行语句如下：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721231142326.png" alt="image-20210721231142326" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721231142326.png" alt="image-20210721231142326" style="zoom:80%;" />
 
 ### 5.3 数据类型
 
@@ -590,7 +590,7 @@ DROP TABLE IF EXISTS 表名;
 
 运行语句效果如下：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721235108267.png" alt="image-20210721235108267" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721235108267.png" alt="image-20210721235108267" style="zoom:80%;" />
 
 ### 5.5 修改表
 
@@ -659,37 +659,37 @@ alter table stu drop addr;
 
 第一步： 点击连接，选择 MySQL
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210721235928346.png" alt="image-20210721235928346" style="zoom:70%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210721235928346.png" alt="image-20210721235928346" style="zoom:70%;" />
 
 第二步：填写连接数据库必要的信息
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722000116080.png" alt="image-20210722000116080" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722000116080.png" alt="image-20210722000116080" style="zoom:80%;" />
 
 以上操作没有问题就会出现如下图所示界面：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722000345349.png" alt="image-20210722000345349" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722000345349.png" alt="image-20210722000345349" style="zoom:80%;" />
 
 #### 6.3.2 操作
 
 连接成功后就能看到如下图界面：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722000521997.png" alt="image-20210722000521997" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722000521997.png" alt="image-20210722000521997" style="zoom:80%;" />
 
 - **修改表结构**
 
 通过下图操作修改表结构：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722000740661.png" alt="image-20210722000740661" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722000740661.png" alt="image-20210722000740661" style="zoom:80%;" />
 
 点击了设计表后即出现如下图所示界面，在图中红框中直接修改字段名，类型等信息：
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722000929075.png" alt="image-20210722000929075" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722000929075.png" alt="image-20210722000929075" style="zoom:80%;" />
 
 - **编写 SQL 语句并执行**
 
 按照如下图所示进行操作即可书写 SQL 语句并执行 sql 语句。
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722001333817.png" alt="image-20210722001333817" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722001333817.png" alt="image-20210722001333817" style="zoom:80%;" />
 
 ## 7，DML
 
@@ -774,7 +774,7 @@ UPDATE 表名 SET 列名1=值1,列名2=值2,… [WHERE 条件] ;
 
     上面语句的执行完后查询到的结果是：
 
-    ![image-20210722204233305](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722204233305.png)
+    ![image-20210722204233305](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722204233305.png)
 
 ### 7.3 删除数据
 
@@ -798,11 +798,11 @@ delete from stu;
 
 下面是黑马程序员展示试题库数据的页面
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722215838144.png" alt="image-20210722215838144" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722215838144.png" alt="image-20210722215838144" style="zoom:80%;" />
 
 页面上展示的数据肯定是在数据库中的试题库表中进行存储，而我们需要将数据库中的数据查询出来并展示在页面给用户看。上图中的是最基本的查询效果，那么数据库其实是很多的，不可能在将所有的数据在一页进行全部展示，而页面上会有分页展示的效果，如下：
 
-![image-20210722220139174](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722220139174.png)
+![image-20210722220139174](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722220139174.png)
 
 当然上图中的难度字段当我们点击也可以实现排序查询操作。从这个例子我们就可以看出，对于数据库的查询时灵活多变的，需要根据具体的需求来实现，而数据库查询操作也是最重要的操作，所以此部分需要大家重点掌握。
 
@@ -898,7 +898,7 @@ AS: AS 也可以省略
 
   上面语句中的\*不建议大家使用，因为在这写\*不方便我们阅读 sql 语句。我们写字段列表的话，可以添加注释对每一个字段进行说明
 
-  <img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722221534870.png" alt="image-20210722221534870" style="zoom:80%;" />
+  <img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722221534870.png" alt="image-20210722221534870" style="zoom:80%;" />
 
   而在上课期间为了简约课程的时间，老师很多地方都会写\*。
 
@@ -910,7 +910,7 @@ AS: AS 也可以省略
 
   执行上面语句结果如下：
 
-  ![image-20210722221756380](https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722221756380.png)
+  ![image-20210722221756380](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722221756380.png)
 
   从上面的结果我们可以看到有重复的数据，我们也可以使用 `distinct` 关键字去重重复数据。
 
@@ -939,7 +939,7 @@ SELECT 字段列表 FROM 表名 WHERE 条件列表;
 
 条件列表可以使用以下运算符
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722190508272.png" alt="image-20210722190508272" style="zoom:60%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722190508272.png" alt="image-20210722190508272" style="zoom:60%;" />
 
 #### 8.2.2 条件查询练习
 
@@ -1075,7 +1075,7 @@ SELECT 字段列表 FROM 表名 ORDER BY 排序字段名1 [排序方式1],排序
 
 如何理解呢？假设有如下表
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722194410628.png" alt="image-20210722194410628" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722194410628.png" alt="image-20210722194410628" style="zoom:80%;" />
 
 现有一需求让我们求表中所有数据的数学成绩的总和。这就是对 math 字段进行纵向求和。
 
@@ -1194,7 +1194,7 @@ SELECT 字段列表 FROM 表名 [WHERE 分组前条件限定] GROUP BY 分组字
 
 如下图所示，大家在很多网站都见过类似的效果，如京东、百度、淘宝等。分页查询是将数据一页一页的展示给用户看，用户也可以通过点击查看下一页的数据。
 
-<img src="https://gitee.com/lin-zili/markdown-picture/raw/master/images/image-20210722230330366.png" alt="image-20210722230330366" style="zoom:80%;" />
+<img src="https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20210722230330366.png" alt="image-20210722230330366" style="zoom:80%;" />
 
 接下来我们先说分页查询的语法。
 
