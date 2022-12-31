@@ -3,6 +3,7 @@ import nav from './config/nav'
 import sidebar from './config/siderBar'
 import algolia from './config/algolia'
 export default defineConfig({
+  base: '/lindocs/',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   // 资源目录
   srcDir: './src',
