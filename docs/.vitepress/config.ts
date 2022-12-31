@@ -17,7 +17,8 @@ export default defineConfig({
   lastUpdated: true,
   // 代码行
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    theme: 'github-dark'
   },
   themeConfig: {
     outline: [2, 3],
