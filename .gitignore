@@ -8,3 +8,4 @@ pnpm-global
 TODOs.md
 docs/.vitepress/cache
 docs/.vitepress/dist
+deploy.sh

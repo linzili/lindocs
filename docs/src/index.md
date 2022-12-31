@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /guide/what-is-vitepress
+      link: /java/java-base
     - theme: alt
       text: View on GitHub
       link: https://github.com/vuejs/vitepress
@@ -20,7 +20,7 @@ hero:
 features:
   - icon: 📓
     title: 前端学习
-    details: 掌握HTML、CSS、JS，正在学习 VUE3+TS+Pinia
+    details: 掌握HTML、CSS、JavaScript，正在学习 VUE3➕TypeScript➕Pinia
   - icon: 🚩
     title: JAVA深度学习
     details: 从初出茅庐到掌握各种类型编程，保障代码质量。
