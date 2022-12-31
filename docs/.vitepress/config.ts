@@ -4,7 +4,7 @@ import sidebar from './config/siderBar'
 import algolia from './config/algolia'
 export default defineConfig({
   base: '/lindocs/',
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: './favicon.ico' }]],
   // 资源目录
   srcDir: './src',
   // 语言
@@ -20,6 +20,7 @@ export default defineConfig({
     lineNumbers: true
   },
   themeConfig: {
+    outline: [2, 3],
     // 导航
     nav,
     // 侧边栏

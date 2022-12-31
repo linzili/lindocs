@@ -6,7 +6,15 @@ function sidebarGuide() {
     }
   ]
 }
-
+function sidebarDatabase() {
+  return [
+    {
+      text: 'MySql',
+      items: [{ text: 'mysql基础', link: '/database/mysql-base' }]
+    }
+  ]
+}
 export default {
-  '/guide/': sidebarGuide()
+  '/guide/': sidebarGuide(),
+  '/database/': sidebarDatabase()
 }

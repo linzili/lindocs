@@ -17,10 +17,15 @@
 .dark {
   --vp-code-block-bg: rgba(0, 0, 0, 0.2);
   --vp-c-text-code: #c0cec0;
+  --vp-c-brand-light: rgba(255, 255, 255, 0.87);
   /* fix contrast on gray cards: check the same above (this is the default) */
   --vp-c-text-dark-2: rgba(235, 235, 235, 0.6);
 }
-
+.outline-title,
+.outline-link.active,
+.outline-link:hover {
+  color: var(--vp-c-brand-light) !important;
+}
 /**
  * Component: Code
  * -------------------------------------------------------------------------- */
