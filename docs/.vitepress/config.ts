@@ -4,14 +4,7 @@ import sidebar from './config/siderBar'
 import algolia from './config/algolia'
 export default defineConfig({
   base: '/lindocs/',
-  head: [
-    ['link', { rel: 'icon', href: './favicon.ico' }],
-    [
-      'script',
-      {},
-      "var _hmt = _hmt || [];(function () { var hm = document.createElement('script') hm.src = 'https://hm.baidu.com/hm.js?9a9e392378488c5210fec8d7808cdd68' var s = document.getElementsByTagName('script')[0] s.parentNode.insertBefore(hm, s)})()"
-    ]
-  ],
+  head: [['link', { rel: 'icon', href: './favicon.ico' }]],
   // 资源目录
   srcDir: './src',
   // 语言
