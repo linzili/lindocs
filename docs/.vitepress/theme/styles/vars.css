@@ -11,20 +11,21 @@
   --vp-c-disabled-bg: rgba(125, 125, 125, 0.2);
   /* fix contrast on gray cards: used by --vp-c-text-2 */
   --vp-c-brand-light: #4a8dea;
+  --vp-c-aside-link: #4a8dea;
   --vp-c-text-light-2: rgba(56 56 56 / 70%);
 }
 
 .dark {
   --vp-code-block-bg: rgba(0, 0, 0, 0.2);
   --vp-c-text-code: #c0cec0;
-  --vp-c-brand-light: rgba(255, 255, 255, 0.87);
+  --vp-c-aside-link: rgba(255, 255, 255, 0.87);
   /* fix contrast on gray cards: check the same above (this is the default) */
   --vp-c-text-dark-2: rgba(235, 235, 235, 0.6);
 }
 .outline-title,
 .outline-link.active,
 .outline-link:hover {
-  color: var(--vp-c-brand-light) !important;
+  color: var(--vp-c-aside-link) !important;
 }
 /**
  * Component: Code

@@ -1,11 +1,3 @@
-function sidebarGuide() {
-  return [
-    {
-      text: 'Introduction',
-      items: [{ text: 'What is VitePress?', link: '/guide/what-is-vitepress' }]
-    }
-  ]
-}
 function sidebarDatabase() {
   return [
     {
@@ -31,7 +23,6 @@ function sidebarJava() {
   ]
 }
 export default {
-  '/guide/': sidebarGuide(),
   '/database/': sidebarDatabase(),
   '/java/': sidebarJava()
 }
