@@ -10,7 +10,10 @@ function sidebarDatabase() {
   return [
     {
       text: 'MySql',
-      items: [{ text: 'mysql基础', link: '/database/mysql-base' }]
+      items: [
+        { text: 'mysql基础', link: '/database/mysql/mysql-base' }
+        // { text: 'navicat安装', link: '/database/mysql/navicat' }
+      ]
     }
   ]
 }

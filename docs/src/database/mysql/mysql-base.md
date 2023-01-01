@@ -651,7 +651,7 @@ alter table stu drop addr;
 
 ### 6.2 navicat 安装
 
-参考 : 安装步骤.md
+参考 : [安装步骤](./navicat.md)
 
 ### 6.3 navicat 使用
 
