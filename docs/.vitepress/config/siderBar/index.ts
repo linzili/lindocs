@@ -22,7 +22,20 @@ function sidebarJava() {
     }
   ]
 }
+function sidebarFrontend() {
+  return [
+    {
+      text: 'JavaScript',
+      items: [{ text: 'JavaScript基础', link: '/frontend/js/' }]
+    },
+    {
+      text: 'Vue',
+      items: [{ text: '通用API', link: '/frontend/vue/api/general' }]
+    }
+  ]
+}
 export default {
   '/database/': sidebarDatabase(),
-  '/java/': sidebarJava()
+  '/java/': sidebarJava(),
+  '/frontend/': sidebarFrontend()
 }
