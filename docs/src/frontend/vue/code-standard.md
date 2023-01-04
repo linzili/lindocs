@@ -154,6 +154,14 @@ module.exports = {
 }
 ```
 
+### 4.在 IDEA 或 WebStorm 中使用
+
+- 在设置中搜索 ESLint 选择自动 ESLint 配置 和 保存时允许 eslint --fix
+
+![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104193551.png)
+
+![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104193914.png)
+
 ## git Husky
 
 > 虽然我们已经要求项目使用 eslint 了，但是不能保证组员提交代码之前都将 eslint 中的问题解决掉
