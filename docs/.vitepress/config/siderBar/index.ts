@@ -30,7 +30,11 @@ function sidebarFrontend() {
     },
     {
       text: 'Vue',
-      items: [{ text: '通用API', link: '/frontend/vue/api/general' }]
+      items: [
+        { text: '快速开始', link: '/frontend/vue/quick-start' },
+        { text: '代码规范', link: '/frontend/vue/code-standard' },
+        { text: '通用API', link: '/frontend/vue/api/general' }
+      ]
     }
   ]
 }
