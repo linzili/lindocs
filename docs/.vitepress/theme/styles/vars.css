@@ -27,6 +27,9 @@
 .outline-link:hover {
   color: var(--vp-c-aside-link) !important;
 }
+.vp-doc blockquote {
+  border-left-color: var(--vp-c-aside-link);
+}
 /**
  * Component: Code
  * -------------------------------------------------------------------------- */
