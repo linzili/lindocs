@@ -15,19 +15,19 @@ pnpm create vite
 
 2. 输入项目名称，默认是 vite-project
 
-![image-20220713110332145](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20220713110332145.7cf18fea.png)
+![image-20220713110332145](http://cdn.azhiyuan.com.cn/markdown/img/image-20220713110332145.7cf18fea.png)
 
 3. 选择前端框架
 
-![image-20220713110539914](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20220713110539914.bf76244f.png)
+![image-20220713110539914](http://cdn.azhiyuan.com.cn/markdown/img/image-20220713110539914.bf76244f.png)
 
 4. 选择项目类型
 
-![image-20220713110719136](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20220713110719136.ea78086b.png)
+![image-20220713110719136](http://cdn.azhiyuan.com.cn/markdown/img/image-20220713110719136.ea78086b.png)
 
 5. 创建完毕
 
-![image-20220713110801896](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20220713110801896.96d4a6b5.png)
+![image-20220713110801896](http://cdn.azhiyuan.com.cn/markdown/img/image-20220713110801896.96d4a6b5.png)
 
 6. 进入项目目录，安装依赖，启动项目。
 
@@ -35,7 +35,7 @@ pnpm create vite
 
 - `vetur` 插件需要禁用，安装 `volar`插件。
 
-![image-20220713115203696](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/image-20220713115203696.65e4e754.png)
+![image-20220713115203696](http://cdn.azhiyuan.com.cn/markdown/img/image-20220713115203696.65e4e754.png)
 
 ## vue3 常用组件库
 

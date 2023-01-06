@@ -26,7 +26,7 @@ trim_trailing_whitespace = false
 VSCode 需要安装一个插件：EditorConfig for VS Code
 :::
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104171220.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104171220.png)
 
 ## 使用 prettier 工具
 
@@ -83,16 +83,16 @@ npm install prettier -D
 
 ### 4. VSCode 安装 prettier 插件
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104172343.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104172343.png)
 
 ### 5. 在 Vscode 中设置
 
 - settings =>format on save => 勾选上
 - settings => editor default format => 选择 prettier
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104172651.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104172651.png)
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104172751.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104172751.png)
 
 ### 6. 测试 prettier 是否生效
 
@@ -121,7 +121,8 @@ npm install eslint -D
 
 ### 2. VSCode 安装 ESLint 插件
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104182321.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104182321.png)
+http://cdn.azhiyuan.com.cn/markdown/img/2023/01/05/20230105001206.jpg
 
 ### 3. 解决 eslint 和 prettier 冲突的问题
 
@@ -158,9 +159,9 @@ module.exports = {
 
 - 在设置中搜索 ESLint 选择自动 ESLint 配置 和 保存时允许 eslint --fix
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104193551.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104193551.png)
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104193914.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104193914.png)
 
 ## git Husky
 
@@ -240,23 +241,23 @@ npx commitizen init cz-conventional-changelog --save-dev --save-exact
 
 - 第二步选择本次修改的范围（作用域）
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104184328.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104184328.png)
 
 - 第三步选择提交的信息
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104184347.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104184347.png)
 
 - 第四步提交详细的描述信息
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104184356.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104184356.png)
 
 - 第五步是否是一次重大的更改
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104184410.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104184410.png)
 
 - 第六步是否影响某个 open issue
 
-![](https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/20230104184416.png)
+![](http://cdn.azhiyuan.com.cn/markdown/img/20230104184416.png)
 
 我们也可以在 `package.json` 的 `scripts` 中构建一个命令来执行 cz：
 

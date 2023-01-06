@@ -22,7 +22,7 @@ export default defineConfig({
   },
   themeConfig: {
     recommend: {
-      mpwx: 'https://markdown-1303834149.cos.ap-shanghai.myqcloud.com/markdown/img/6593924985b60756ef48c391e43d48a.png'
+      mpwx: 'http://cdn.azhiyuan.com.cn/markdown/img/6593924985b60756ef48c391e43d48a.png'
     },
     outline: [2, 3],
     // 导航
