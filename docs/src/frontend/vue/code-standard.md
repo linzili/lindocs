@@ -122,7 +122,7 @@ npm install eslint -D
 ### 2. VSCode 安装 ESLint 插件
 
 ![](http://cdn.azhiyuan.com.cn/markdown/img/20230104182321.png)
-http://cdn.azhiyuan.com.cn/markdown/img/2023/01/05/20230105001206.jpg
+<http://cdn.azhiyuan.com.cn/markdown/img/2023/01/05/20230105001206.jpg>
 
 ### 3. 解决 eslint 和 prettier 冲突的问题
 
@@ -169,7 +169,7 @@ module.exports = {
 
 - 也就是我们希望保证代码仓库中的代码都是符合 eslint 规范的；
 
-- 那么我们需要在组员执行 `git commit ` 命令的时候对其进行校验，如果不符合 eslint 规范，那么自动通过规范进行修复；
+- 那么我们需要在组员执行 `git commit` 命令的时候对其进行校验，如果不符合 eslint 规范，那么自动通过规范进行修复；
 
 那么如何做到这一点呢？可以通过 Husky 工具：
 
