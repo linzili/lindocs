@@ -1231,7 +1231,8 @@ public class JspController {
 
 ​	过滤器是在Servlet执行之前或者之后进行处理。而拦截器是对Handler（处理器）执行前后进行处理。
 
-如图：![image-20220627145440758](C:\Users\DunXi\AppData\Roaming\Typora\typora-user-images\image-20220627145440758.png)
+如图：
+![image-20220627145440758](https://bed-1309358403.cos.ap-shanghai.myqcloud.com/img/2023/01/08/20230108222921.png)
 
 
 
@@ -1485,11 +1486,11 @@ public class LoginInterceptor implements HandlerInterceptor {
 
 ​	这些拦截器中方法的执行顺序如图（**preHandler都返回true的情况下**）：
 
-![image-20220627175056785](C:\Users\DunXi\AppData\Roaming\Typora\typora-user-images\image-20220627175056785.png)
+![image-20220627175056785](https://bed-1309358403.cos.ap-shanghai.myqcloud.com/img/2023/01/08/20230108222954.png)
 
 ​	如果**拦截器3的preHandle方法返回值为false**。执行顺序如图：
 
-![image-20220627175136504](C:\Users\DunXi\AppData\Roaming\Typora\typora-user-images\image-20220627175136504.png)
+![image-20220627175136504](https://bed-1309358403.cos.ap-shanghai.myqcloud.com/img/2023/01/08/20230108222958.png)
 
 - ​	只有所有拦截器都放行了，postHandle方法才会被执行。
 - ​    只有当前拦截器放行了，当前拦截器的afterCompletion方法才会被执行。
@@ -1831,7 +1832,7 @@ public class DownLoadController {
 
 ​	完整流程图如下：
 
-![image-20220627221224958](C:\Users\DunXi\AppData\Roaming\Typora\typora-user-images\image-20220627221224958.png)
+![image-20220627221224958](https://bed-1309358403.cos.ap-shanghai.myqcloud.com/img/2023/01/08/20230108223011.png)
 
 ### 5.1 类JSP开发模式执行流程
 
