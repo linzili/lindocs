@@ -1404,7 +1404,7 @@ SQL语句如下
 
 结果集
 
-![image-20210224155400455](E:\JAVA学习\三更Mybatis课程讲义\img\image-2.png)
+![image-20210224155400455](https://bed-1309358403.cos.ap-shanghai.myqcloud.com/img/2023/01/08/20230108213418.png)
 
 我们可以使用如下两种方式封装结果集
 
