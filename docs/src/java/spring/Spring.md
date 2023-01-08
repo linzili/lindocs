@@ -2,23 +2,21 @@
 
 ## 1.Spring简介
 
-​	Spring是一个开源框架，它由Rod Johnson创建。它是为了解决企业应用开发的复杂性而创建的。
+​ Spring是一个开源框架，它由Rod Johnson创建。它是为了解决企业应用开发的复杂性而创建的。
 
-​	目前是JavaEE开发的灵魂框架。他可以简化JavaEE开发，可以非常方便的整合其它框架，无侵入的进行功能增强。
+​ 目前是JavaEE开发的灵魂框架。他可以简化JavaEE开发，可以非常方便的整合其它框架，无侵入的进行功能增强。
 
-​	Spring的核心就是 控制反转（IoC）和面向切面（AOP）。
+​ Spring的核心就是 控制反转（IoC）和面向切面（AOP）。
 
 ## 2.IOC控制反转
 
 ### 2.1 概念
 
-​	控制反转，之前对象的控制权在类手上，现在反转后到了Spring手上。
-
-
+​ 控制反转，之前对象的控制权在类手上，现在反转后到了Spring手上。
 
 ### 2.2 入门案例
 
-#### ①导入依赖
+#### 导入依赖
 
 导入SpringIOC相关依赖
 
@@ -61,17 +59,15 @@ public static void main(String[] args) {
 }
 ```
 
-
-
 ### 2.3 Bean的常用属性配置
 
 #### 2.3.1 id
 
-​	bean的唯一标识，同一个Spring容器中不允许重复
+​ bean的唯一标识，同一个Spring容器中不允许重复
 
 #### 2.3.2 class
 
-​	全类名，用于反射创建对象
+​ 全类名，用于反射创建对象
 
 #### 2.3.3 scope
 
@@ -81,11 +77,9 @@ scope主要有两个值：singleton和prototype
 
 如果设置为**prototype**则一个容器会有多个该bean对象。每次调用getBean方法获取的时候都会创建一个新对象。
 
-
-
 ## 3.DI依赖注入
 
-​	依赖注入可以理解成IOC的一种应用场景，反转的是对象间依赖关系维护权。
+​ 依赖注入可以理解成IOC的一种应用场景，反转的是对象间依赖关系维护权。
 
 ### 3.1 set方法注入
 
@@ -179,8 +173,6 @@ public class Student {
 
 ```
 
-
-
 ### 3.2有参构造注入
 
 在要注入属性的bean标签中进行配置。前提是该类有提供对应的有参构造。
@@ -210,10 +202,6 @@ public class Student {
     }
 }
 ```
-
-
-
- 
 
 ### 3.3复杂类属性注入
 
@@ -308,13 +296,11 @@ public class Phone {
 }
 ```
 
-
-
 ## 4.Lombook
 
-### ①导入依赖
+### 导入依赖
 
-```xml
+``` xml
 <dependency>
     <groupId>org.projectlombok</groupId>
     <artifactId>lombok</artifactId>
@@ -322,7 +308,7 @@ public class Phone {
 </dependency>
 ```
 
-### ②添加注解
+### 添加注解
 
 ```java
 @Data//根据属性生成set、get方法
@@ -336,11 +322,9 @@ public class Phone {
 }
 ```
 
-
-
 ## 5.SPEL
 
-​	我们可以在配置文件中使用SPEL表达式。写法如下：
+​ 我们可以在配置文件中使用SPEL表达式。写法如下：
 
 ```xml
 <!--可以做一些简单的计算-->
@@ -351,15 +335,13 @@ public class Phone {
 
 注意：SPEL需要写到value属性中，不能写到ref属性里面。
 
-
-
 ## 6.配置文件
 
 ### 6.1 读取properties文件
 
-​	我们可以让Spring读取properties文件中的key/value，然后使用其中的值。
+​ 我们可以让Spring读取properties文件中的key/value，然后使用其中的值。
 
-#### ①设置读取properties
+#### 设置读取properties
 
 在Spring配置文件中加入如下标签：指定要读取的文件的路径。
 
@@ -370,9 +352,9 @@ public class Phone {
 
 其中的classpath表示类加载路径下。
 
-我们也会用到如下写法：classpath:*.properties  其中的 * 表示文件名任意。
+我们也会用到如下写法：classpath:*.properties  其中的* 表示文件名任意。
 
-**注意：context命名空间的引入是否正确**
+> 注意：context命名空间的引入是否正确
 
 ### ②使用配置文件中的值
 
@@ -387,16 +369,13 @@ public class Phone {
 </bean>
 ```
 
-
 ### 6.2 引入Spring配置文件
 
-​	我们可以在主的配置文件中通过import标签的resource属性，引入其他的xml配置文件
+​ 我们可以在主的配置文件中通过import标签的resource属性，引入其他的xml配置文件
 
 ```xml
 <import resource="classpath:jdbc.xml"></import>
 ```
-
-
 
 ## 7.低频知识点
 
@@ -404,7 +383,7 @@ public class Phone {
 
 #### 7.1.1 name属性
 
-​	我们可以用name属性来给bean取名。例如：
+​ 我们可以用name属性来给bean取名。例如：
 
 ```xml
     <bean class="com.alibaba.druid.pool.DruidDataSource" id="dataSource" name="dataSource2,dataSource3">
@@ -490,7 +469,7 @@ public class Student {
 
 #### 7.1.5 factory-bean&factory-method
 
-​	当我们需要让Spring容器使用工厂类来创建对象放入Spring容器的时候可以使用factory-bean和factory-method属性。
+​ 当我们需要让Spring容器使用工厂类来创建对象放入Spring容器的时候可以使用factory-bean和factory-method属性。
 
 ##### 7.1.5.1 配置实例工厂创建对象
 
@@ -514,18 +493,16 @@ ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext("applica
 Car car = (Car) app.getBean("car");
 ```
 
-
-
 ##### 7.1.5.2 配置静态工厂创建对象
 
-​	配置文件中进行配置
+​ 配置文件中进行配置
 
 ```xml
 <!--使用静态工厂创建Car放入Spring容器-->
 <bean class="com.dunxi.factory.CarStaticFactory" factory-method="getCar" id="car2"></bean>
 ```
 
-​	创建容器获取对象测试
+​ 创建容器获取对象测试
 
 ```java
 ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -533,21 +510,17 @@ ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext("applica
 Car car = (Car) app.getBean("car2");
 ```
 
-
-
-
-
-# Spring-02
+## Spring-02
 
 ## 1.注解开发
 
-​	为了简化配置，Spring支持使用注解代替xml配置。
+​ 为了简化配置，Spring支持使用注解代替xml配置。
 
 ## 2.Spring常用注解
 
 ### 2.0 注解开发准备工作
 
-​	如果要使用注解开发必须要开启组件扫描，这样加了注解的类才会被识别出来。Spring才能去解析其中的注解。
+​ 如果要使用注解开发必须要开启组件扫描，这样加了注解的类才会被识别出来。Spring才能去解析其中的注解。
 
 ```xml
 <!--注解扫描-->
@@ -555,25 +528,23 @@ Car car = (Car) app.getBean("car2");
 <context:component-scan base-package="com.dunxi"></context:component-scan>
 ```
 
-
-
 ### 2.1 IOC相关注解
 
 #### 2.1.1 @Component,@Controller,@Service,@Repository
 
-​	上述四个注解都是加到类上的。
+​ 上述四个注解都是加到类上的。
 
-​	他们都可以起到类似bean标签的作用。可以把加了该注解类的对象放入Spring容器中。
+​ 他们都可以起到类似bean标签的作用。可以把加了该注解类的对象放入Spring容器中。
 
-​	实际在使用时选择任意一个都可以。但是后三个注解是语义化注解。
+​ 实际在使用时选择任意一个都可以。但是后三个注解是语义化注解。
 
-​	如果是Service类要求使用@Service。
+​ 如果是Service类要求使用@Service。
 
-​	如果是Dao类要求使用@Repository
+​ 如果是Dao类要求使用@Repository
 
-​	如果是Controller类（SpringMVC中会学习到）要求使用@Controller
+​ 如果是Controller类（SpringMVC中会学习到）要求使用@Controller
 
-​	如果是其他类可以使用@Component
+​ 如果是其他类可以使用@Component
 
 例如：
 
@@ -644,17 +615,13 @@ public static void main(String[] args) {
 }
 ```
 
-
-
 ### 2.2 DI相关注解
 
-​	如果一个bean已经放入Spring容器中了。那么我们可以使用下列注解实现属性注入，让Spring容器帮我们完成属性的赋值。
-
-
+​ 如果一个bean已经放入Spring容器中了。那么我们可以使用下列注解实现属性注入，让Spring容器帮我们完成属性的赋值。
 
 #### 2.2.1 @Value
 
-​	主要用于String，Integer等可以直接赋值的属性注入。不依赖setter方法，支持SpELl表达式（#{45+3}）。
+​ 主要用于String，Integer等可以直接赋值的属性注入。不依赖setter方法，支持SpELl表达式（#{45+3}）。
 
 例如：
 
@@ -681,11 +648,9 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
-
-
 #### 2.2.2 @AutoWried
 
-​	Spring会给加了该注解的属性自动注入数据类型相同的对象。
+​ Spring会给加了该注解的属性自动注入数据类型相同的对象。
 
 前提条件是Spring相关的配置文件都写好了，还有使用这个注解的类 一定要放到spring容器当中
 
@@ -715,13 +680,11 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
-​	**required属性代表这个属性是否是必须的，默认值为true。如果是true的话Spring容器中如果找不到相同类型的对象完成属性注入就会出现异常。**
-
-
+​ **required属性代表这个属性是否是必须的，默认值为true。如果是true的话Spring容器中如果找不到相同类型的对象完成属性注入就会出现异常。**
 
 #### 2.2.3 @Qualifier
 
-​	如果相同类型的bean在容器中有多个时，单独使用@AutoWired就不能满足需求，这时候可以再加上@Qualifier来指定bean的名字从容器中获取bean注入。
+​ 如果相同类型的bean在容器中有多个时，单独使用@AutoWired就不能满足需求，这时候可以再加上@Qualifier来指定bean的名字从容器中获取bean注入。
 
 例如：
 
@@ -731,17 +694,15 @@ public class UserServiceImpl implements UserService {
 private UserDao userDao;
 ```
 
-**注意：该注解不能单独使用，需要配合@Autowired使用**
-
-
+> 注意：该注解不能单独使用，需要配合@Autowired使用
 
 ### 2.3 xml配置文件相关注解
 
 #### @Configuration
 
-​	标注在类上，表示当前类是一个注解（配置）类。我们可以用注解来完全替换掉xml配置文件。
+​ 标注在类上，表示当前类是一个注解（配置）类。我们可以用注解来完全替换掉xml配置文件。
 
-​	注意：如果使用配置类替换了xml配置，spring容器需要使用：AnnotationConfigApplicationContext
+​ 注意：如果使用配置类替换了xml配置，spring容器需要使用：AnnotationConfigApplicationContext
 
 例如：
 
@@ -751,15 +712,13 @@ public class ApplicationConfig {
 }
 ```
 
-
-
 #### @ComponentScan
 
-​		可以用来代替context:component-scan标签来配置组件扫描。
+​  可以用来代替context:component-scan标签来配置组件扫描。
 
-​		basePackages属性来指定要扫描的包。
+​  basePackages属性来指定要扫描的包。
 
-​		注意要加在配置类上。
+​  注意要加在配置类上。
 
 例如：
 
@@ -770,13 +729,11 @@ public class ApplicationConfig {
 }
 ```
 
-
-
 #### @Bean
 
-​		可以用来代替bean标签，主要用于第三方类的注入。
+​  可以用来代替bean标签，主要用于第三方类的注入。
 
-​		使用：定义一个方法，在方法中创建对应的对象并且作为返回值返回。然后再方法上加上@Bean注解，注解的value属性来设置bean的名称。
+​  使用：定义一个方法，在方法中创建对应的对象并且作为返回值返回。然后再方法上加上@Bean注解，注解的value属性来设置bean的名称。
 
 例如：
 
@@ -828,17 +785,15 @@ public class ApplicationConfig {
     }
 ```
 
-
-
 #### @PropertySource
 
-​		可以用来代替context:property-placeholder,让Spring读取指定的properties文件。然后可以使用@Value来获取读取到的值。
+​  可以用来代替context:property-placeholder,让Spring读取指定的properties文件。然后可以使用@Value来获取读取到的值。
 
-​		**使用：在配置类上加@PropertySource注解，注解的value属性来设置properties文件的路径。然后在配置类中定义成员变量。在成员变量上使用@Value注解来获取读到的值并给对应的成员变量赋值。**
+​  **使用：在配置类上加@PropertySource注解，注解的value属性来设置properties文件的路径。然后在配置类中定义成员变量。在成员变量上使用@Value注解来获取读到的值并给对应的成员变量赋值。**
 
 例如：
 
-```
+``` yaml
 jdbc.driver=com.mysql.jdbc.Driver
 jdbc.url=jdbc:mysql://localhost:3306/mybatis_db
 jdbc.username=root
@@ -852,7 +807,7 @@ jdbc.password=123456
 @ComponentScan(basePackages = "com.dunxi")
 @PropertySource("jdbc.properties")//括号里面写配置文件的路径
 public class ApplicationConfig {
-	//先利用Value属性${}读取文件中的内容，然后赋值给变量，然后调用函数的时候直接传入该变量
+ //先利用Value属性${}读取文件中的内容，然后赋值给变量，然后调用函数的时候直接传入该变量
     @Value("${jdbc.driver}")
     private String driverClassName;
 
@@ -879,41 +834,35 @@ public class ApplicationConfig {
 
 **注意事项：使用@Value获取读到的properties文件中的值时使用的是${key},而不是#{key}。**
 
-
-
 ## 3.如何选择
 
-①SSM
+SSM
 
-​		自己项目中的类IOC和DI都使用注解，对第三方jar包中的类，配置组件扫描时使用xml进行配置。
+​  自己项目中的类IOC和DI都使用注解，对第三方jar包中的类，配置组件扫描时使用xml进行配置。
 
 ②SpringBoot
 
-​		纯注解开发
+​  纯注解开发
 
-
-
-# Spring-03
+## Spring-03
 
 ## 1.AOP
 
 ### 1.1 概念
 
-​	AOP为Aspect Oriented Programming的缩写，意为：面向切面编程。它是一种可以再不修改原来的核心代码的情况下给程序动态统一进行增强的一种技术。
+​ AOP为Aspect Oriented Programming的缩写，意为：面向切面编程。它是一种可以再不修改原来的核心代码的情况下给程序动态统一进行增强的一种技术。
 
-​	**SpringAOP：批量对Spring容器中bean的方法做增强，并且这种增强不会与原来方法中的代码耦合。**
-
-
+​ **SpringAOP：批量对Spring容器中bean的方法做增强，并且这种增强不会与原来方法中的代码耦合。**
 
 ### 1.2 快速入门
 
 #### 1.2.1 需求
 
-​	要求让_04_SpringAOP模块中service包下所有类的所有方法在调用前都输出：方法被调用了。
+​ 要求让_04_SpringAOP模块中service包下所有类的所有方法在调用前都输出：方法被调用了。
 
 #### 1.2.2 准备工作
 
-##### ①添加依赖
+##### 添加依赖
 
 需要添加SpringIOC相关依赖和AOP相关依赖。
 
@@ -931,6 +880,7 @@ public class ApplicationConfig {
         <version>1.8.13</version>
     </dependency>
 ```
+
 ##### ②相关bean要注入容器中
 
 开启组件扫描
@@ -959,11 +909,9 @@ public class UserService {
 }
 ```
 
-
-
 #### 1.2.3 实现AOP
 
-##### ①开启AOP注解支持
+##### 开启AOP注解支持
 
 使用**aop:aspectj-autoproxy**标签
 
@@ -980,8 +928,6 @@ public class UserService {
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 </beans>
 ```
-
-
 
 ##### ②创建切面类
 
@@ -1001,8 +947,8 @@ public class MyAspect {
 
     }
     /*
-    	用@Before注解来指定方法中是增强的代码，并且是在被增强方法执行前执行的
-    	@Before的属性写上加了@Pointcut注解的方法：方法名()
+     用@Before注解来指定方法中是增强的代码，并且是在被增强方法执行前执行的
+     @Before的属性写上加了@Pointcut注解的方法：方法名()
     */
 
     @Before("pt()")//括号里面表示调用哪个切点表达式
@@ -1027,8 +973,6 @@ public static void main(String[] args) {
 }
 ```
 
-
-
 ### 1.3 AOP核心概念
 
 - Joinpoint（连接点）：所谓连接点是指那些可以被增强到的点。在spring中，这些点指的是方法，因为spring只支持方法类型的连接点
@@ -1038,15 +982,11 @@ public static void main(String[] args) {
 - **Aspect（切面）：是切入点和通知（引介）的结合**
 - Proxy(代理)：一个类被AOP增强后，就产生一个结果代理类
 
-
-
 ### 1.4 切点确定
 
 #### 1.4.1 切点表达式
 
-​		可以使用切点表达式来表示要对哪些方法进行增强。
-
-
+​  可以使用切点表达式来表示要对哪些方法进行增强。
 
 写法：**execution([修饰符]返回值类型 包名.类名.方法名(参数))**
 
@@ -1054,8 +994,6 @@ public static void main(String[] args) {
 - 返回值类型、包名、类名、方法名可以使用星号* 代表任意
 - 包名与类名之间一个点.代表当前包下的类，两个点..表示当前包及其子包下的类
 - 参数列表可以使用两个点 ..表示任意个数，任意类型做参数列表
-
-
 
 例如：
 
@@ -1066,11 +1004,9 @@ execution(* com.dunxi.service.*.*())//表示com.dunxi.service包下任意类，�
 execution(* com.dunxi.service.*.delete*(..))//表示com.dunxi.service包下任意类，方法名必须以delete开头，方法不能有参数，返回值类型任意
 ```
 
-
-
 #### 1.4.2 切点函数@annotation
 
-​		我们也可以在要增强的方法上加上注解。然后使用@annotation来表示对加了什么注解的方法进行增强。
+​  我们也可以在要增强的方法上加上注解。然后使用@annotation来表示对加了什么注解的方法进行增强。
 
 写法**@annotation(注解的全类名)**
 
@@ -1116,8 +1052,6 @@ public class MyAspect {
 }
 ```
 
-
-
 ### 1.5 通知分类
 
 - @Before：前置通知，在目标方法执行前执行
@@ -1144,8 +1078,6 @@ public Object test(){
 }
 ```
 
-
-
 环绕同志非常特殊，他可以对目标方法进行全方位的增强。
 
 例如：
@@ -1166,11 +1098,9 @@ public void around(ProceedingJoinPoint pjp ){
 }
 ```
 
-
-
 ### 1.6 获取被增强方法的相关信息
 
-​	我们实际对方法进行增强时往往还需要获取到被增强代码的相关信息，比如方法名，参数，返回值，异常对象等。
+​ 我们实际对方法进行增强时往往还需要获取到被增强代码的相关信息，比如方法名，参数，返回值，异常对象等。
 
 我们可以在出了环绕通知外的所有通知方法中增加一个**JoinPoint类型**的参数。这个参数封装了被增强方法的相关信息。**我们可以通过这个参数获取到除了异常对象和返回值之外的所有信息。**
 
@@ -1205,9 +1135,9 @@ public void printLog(JoinPoint joinPoint){
 }
 ```
 
-​	
+​
 
-​	如果需要**获取被增强方法中的异常对象或者返回值**则需要在方法参数上加一个对应类型的参数，并且使用注解的属性进行配置。这样Spring会把你想获取的数据赋值给对应的方法参数。
+​ 如果需要**获取被增强方法中的异常对象或者返回值**则需要在方法参数上加一个对应类型的参数，并且使用注解的属性进行配置。这样Spring会把你想获取的数据赋值给对应的方法参数。
 
 例如：
 
@@ -1225,11 +1155,9 @@ public void afterThrowing(JoinPoint joinPoint ,Throwable e){
 }
 ```
 
+​ 还有更简单方便的方法
 
-
-​	还有更简单方便的方法
-
-​	直接在环绕通知方法中增加一个ProceedingJoinPoint类型的参数。这个参数封装了被增强方法的相关信息。
+​ 直接在环绕通知方法中增加一个ProceedingJoinPoint类型的参数。这个参数封装了被增强方法的相关信息。
 
 该参数的proceed()方法被调用相当于被增强方法被执行，调用后的返回值就相当于被增强方法的返回值。
 
@@ -1255,8 +1183,6 @@ public Object around(ProceedingJoinPoint jpj){
     return ret;
 }
 ```
-
-
 
 ### 1.7 AOP应用案例
 
@@ -1285,9 +1211,9 @@ public class AIController {
 }
 ```
 
-​		现在为了保证数据的安全性，要求调用方法时fortuneTelling传入的姓名是经过加密的。我们需要对传入的参数进行解密后才能使用。并且要对该方法的返回值进行加密后返回。
+​  现在为了保证数据的安全性，要求调用方法时fortuneTelling传入的姓名是经过加密的。我们需要对传入的参数进行解密后才能使用。并且要对该方法的返回值进行加密后返回。
 
-​	**PS：后期也可能让其他方法进行相应的加密处理。**
+​ **PS：后期也可能让其他方法进行相应的加密处理。**
 
 字符串加密解密直接使用下面的工具类即可：
 
@@ -1379,13 +1305,11 @@ public class CryptUtil {
 }
 ```
 
-
-
 #### 1.7.2  实现
 
-##### ①导入依赖
+##### 导入依赖
 
-```xml
+``` xml
     <!--SpringIOC相关依赖-->
     <dependency>
         <groupId>org.springframework</groupId>
@@ -1400,10 +1324,9 @@ public class CryptUtil {
     </dependency>
 ```
 
-
 #### 1.7.2 实现
 
-##### ①导入依赖
+##### 导入依赖
 
 ```xml
 <!--SpringIOC相关依赖-->
@@ -1484,8 +1407,6 @@ public class AIController {
 }
 ```
 
-
-
 ##### ⑤定义切面类
 
 ```java
@@ -1532,11 +1453,9 @@ public class CryptAspect {
 }
 ```
 
-
-
 ### 1.8xml配置AOP
 
-#### ①定义切面类
+#### 定义切面类
 
 ```java
 package com.dunxi.aspect;
@@ -1701,21 +1620,17 @@ public class UserService {
 </beans>
 ```
 
-
-
 ### 1.9 多切面顺序问题
 
-​	在实际项目中我们可能会存在配置了多个切面的情况。这种情况下我们很可能需要控制切面的顺序。
+​ 在实际项目中我们可能会存在配置了多个切面的情况。这种情况下我们很可能需要控制切面的顺序。
 
-​	我们在默认情况下Spring有它自己的排序规则。（按照类名排序）
+​ 我们在默认情况下Spring有它自己的排序规则。（按照类名排序）
 
-​	默认排序规则往往不符合我们的要求，我们需要进行特殊控制。
+​ 默认排序规则往往不符合我们的要求，我们需要进行特殊控制。
 
-​	如果是注解方式配置的AOP可以再切面类上加**@Order注解**来控制顺序。**@Order中的属性越小优先级越高**。
+​ 如果是注解方式配置的AOP可以再切面类上加**@Order注解**来控制顺序。**@Order中的属性越小优先级越高**。
 
-​	如果是XML方式配置的AOP，可以通过调整**配置顺序**来控制。
-
-
+​ 如果是XML方式配置的AOP，可以通过调整**配置顺序**来控制。
 
 例如：
 
@@ -1736,19 +1651,15 @@ public class CryptAspect {
 }
 ```
 
-
-
 ### 1.10 AOP原理-动态代理
 
-​	实际上Spring的AOP其实底层就是使用动态代理来完成的。并且使用了两种动态代理分别是JDK的动态代理和Cglib动态代理。
+​ 实际上Spring的AOP其实底层就是使用动态代理来完成的。并且使用了两种动态代理分别是JDK的动态代理和Cglib动态代理。
 
-​	所以我们接下去来学习这两种动态代理，理解下他们的不同点。
-
-
+​ 所以我们接下去来学习这两种动态代理，理解下他们的不同点。
 
 #### 1.10.1 JDK动态代理
 
-​	JDK的动态代理使用的java.lang.reflect.Proxy这个类来进行实现的。要求被代理（被增强）的类需要实现了接口。并且JDK动态代理也只能对接口中的方法进行增强。
+​ JDK的动态代理使用的java.lang.reflect.Proxy这个类来进行实现的。要求被代理（被增强）的类需要实现了接口。并且JDK动态代理也只能对接口中的方法进行增强。
 
 ```java
     public static void main(String[] args) {
@@ -1786,11 +1697,9 @@ public class CryptAspect {
     }
 ```
 
-
-
 #### 1.10.2 Cglib动态代理
 
-​	使用的是org.springframework.cglib.proxy.Enhancer类进行实现的。
+​ 使用的是org.springframework.cglib.proxy.Enhancer类进行实现的。
 
 ```java
 public class CglibDemo {
@@ -1819,27 +1728,23 @@ public class CglibDemo {
 }
 ```
 
-
-
 #### 1.10.3 总结
 
-​	JDK动态代理要求被代理（被增强）的类案必须要实现接口，生成的代理对象相当于是被代理对象的兄弟。
+​ JDK动态代理要求被代理（被增强）的类案必须要实现接口，生成的代理对象相当于是被代理对象的兄弟。
 
-![image-20220517154413061](C:\Users\DunXi\AppData\Roaming\Typora\typora-user-images\image-20220517154413061.png)
+![image-20220517154413061](https://bed-1309358403.cos.ap-shanghai.myqcloud.com/img/2023/01/08/20230108223938.png)
 
 Cglib的动态代理不要求被代理（被增强）的类要实现接口，生成的代理对象相当于被代理对象的子类对象。
 
-![image-20220517154503628](C:\Users\DunXi\AppData\Roaming\Typora\typora-user-images\image-20220517154503628.png)
+![image-20220517154503628](https://bed-1309358403.cos.ap-shanghai.myqcloud.com/img/2023/01/08/20230108223952.png)
 
-​	**Spring的AOP默认情况下有限使用的是JDK的动态代理，如果使用不了JDK的动态代理才会使用Cglib的动态代理。**
-
-
+​ **Spring的AOP默认情况下有限使用的是JDK的动态代理，如果使用不了JDK的动态代理才会使用Cglib的动态代理。**
 
 ### 1.11 切换默认动态代理方式
 
-​	有的时候我们需要修改AOP的代理方式。
+​ 有的时候我们需要修改AOP的代理方式。
 
-​	我们可以使用以下方式修改：
+​ 我们可以使用以下方式修改：
 
 如果我们是采用注解方式配置AOP的话：
 
@@ -1849,8 +1754,6 @@ Cglib的动态代理不要求被代理（被增强）的类要实现接口，生
 <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
 ```
 
-
-
 如果我们是采用xml方式配置的话：
 
 设置aop:config标签的proxy-target-class属性为true，代理方式就会修改成Cglib
@@ -1859,15 +1762,11 @@ Cglib的动态代理不要求被代理（被增强）的类要实现接口，生
 <aop:config proxy-target-class="true">    </aop:config>
 ```
 
+## Spring-04
 
+### 1.Spring整合Junit
 
-
-
-# Spring-04
-
-## 1.Spring整合Junit
-
-### ①导入依赖
+#### 导入依赖
 
 ```xml
 <!-- junit -->
@@ -1883,8 +1782,6 @@ Cglib的动态代理不要求被代理（被增强）的类要实现接口，生
     <version>5.1.9.RELEASE</version>
 </dependency>
 ```
-
-
 
 ### ②编写测试类
 
@@ -1903,7 +1800,7 @@ public class SpringTest {
 
 ### ③注入对象进行测试
 
-​	在测试类中注入要测试的对象，定义测试方法，在其中使用要测试的对象。
+​ 在测试类中注入要测试的对象，定义测试方法，在其中使用要测试的对象。
 
 ```java
 package com.dunxi;
@@ -1930,17 +1827,13 @@ public class SpringTest {
 }
 ```
 
-
-
 ## 2.Spring整合Mybatis
 
-​	我们如果想把Mybatis整合到Spring中需要使用一个整合包mybatis-spring
+​ 我们如果想把Mybatis整合到Spring中需要使用一个整合包mybatis-spring
 
-​	官方文档：http://mybatis.org/spring/zh/index.html
+​ 官方文档：<http://mybatis.org/spring/zh/index.html>
 
-
-
-### ①导入依赖
+### 导入依赖
 
 ```xml
 <!-- spring-jdbc -->
@@ -1976,8 +1869,6 @@ public class SpringTest {
     <version>1.1.16</version>
 </dependency>
 ```
-
-
 
 ### ②往容器中注入整合相关对象
 
@@ -2027,19 +1918,13 @@ public void testUserDao(){
 }
 ```
 
-
-
-# 3.Spring声明式事务
+## 3.Spring声明式事务
 
 ### 3.1 事务回顾
 
-
-
 #### 3.1.1 事务的概念
 
-​	保证一组数据库的操作，要么同时成功，要么同时失败
-
-
+​ 保证一组数据库的操作，要么同时成功，要么同时失败
 
 #### 3.1.2 四大特性
 
@@ -2059,19 +1944,15 @@ public void testUserDao(){
 
   指事务一旦被提交，这组操作修改的数据就真的发生变化了。即使接下来数据库故障也不应该对其有影响。
 
-
-
 ### 3.2 实现声明式事务
 
-​	如果我们自己去对事务进行控制的话我们就需要在原来核心代码的基础上加上事务控制相关的代码。而在我们的实际开发中这种控制的操作也是非常常见的。所以Spring提供了声明式事务的方式让我们去控制事务。
+​ 如果我们自己去对事务进行控制的话我们就需要在原来核心代码的基础上加上事务控制相关的代码。而在我们的实际开发中这种控制的操作也是非常常见的。所以Spring提供了声明式事务的方式让我们去控制事务。
 
-​	只要简单的加个注解（或者是xml配置）就可以实现事务控制，不需要事务控制的时候只需要去掉相应的注解即可。
-
-
+​ 只要简单的加个注解（或者是xml配置）就可以实现事务控制，不需要事务控制的时候只需要去掉相应的注解即可。
 
 #### 3.2.0 案例环境准备
 
-①数据初始化
+数据初始化
 
 ```sql
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`spring_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
@@ -2123,7 +2004,7 @@ public interface AccountDao {
 }
 ```
 
-AccoutDao.xml如下：	
+AccoutDao.xml如下：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -2135,11 +2016,9 @@ AccoutDao.xml如下：
 </mapper>
 ```
 
-
-
 #### 3.2.1 注解实现
 
-##### ①配置事务管理器和事务注解驱动
+##### 配置事务管理器和事务注解驱动
 
 在spring的配置文件中添加如下配置：
 
@@ -2179,23 +2058,20 @@ AccoutDao.xml如下：
         </dependency>
 ```
 
-
-
 #### 3.2.2 xml方式实现
 
-
-
-##### ①配置事务管理器
+##### 配置事务管理器
 
 ```xml
 <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
     <property name="dataSource" ref="dataSource"/>
 </bean>
 ```
+
 ##### ②配置事务切面
 
 ```xml
- 	<!--定义事务管理的通知类-->
+  <!--定义事务管理的通知类-->
     <tx:advice transaction-manager="txManager" id="txAdvice">
         <tx:attributes>
             <tx:method name="trans*"/>
@@ -2218,14 +2094,11 @@ AccoutDao.xml如下：
     </dependency>
 ```
 
-
 ### 3.3 属性配置
 
 #### 3.3.1 事务传播行为propagation
 
-​	当事务方法嵌套调用时，需要控制是否开启新事务传播行为来控制。
-
-
+​ 当事务方法嵌套调用时，需要控制是否开启新事务传播行为来控制。
 
 测试案例：
 
@@ -2265,8 +2138,6 @@ public class AccountServiceImpl implements AccountService {
 }
 ```
 
-
-
 | 属性值                         | 行为                                                   |
 | ------------------------------ | ------------------------------------------------------ |
 | REQUIRED（必须要有）           | 外层方法有事务，内层方法就加入。外层没有，内层就新建   |
@@ -2275,8 +2146,6 @@ public class AccountServiceImpl implements AccountService {
 | NOT_SUPPORTED(支持没有)        | 外层方法有事务，内层方法没有。外层没有，内层也没有     |
 | MANDATORY(强制要求外层有)      | 外层方法有事务，内层方法加入。外层没有，内层就报错     |
 | NEVER（绝不允许有）            | 外层方法有事务，内层方法就报错。外层没有，内层也就没有 |
-
-
 
 例如：
 
@@ -2291,13 +2160,11 @@ public class AccountServiceImpl implements AccountService {
     }
 ```
 
-
-
 #### 3.3.2 隔离级别isolation
 
 Isolation.DEFAULT 使用数据库默认隔离级别
 
-Isolation.READ_UNCOMMITTED 
+Isolation.READ_UNCOMMITTED
 
 Isolation.READ_COMMITTED
 
@@ -2316,11 +2183,9 @@ Isolation.SERIALIZABLE
     }
 ```
 
-
-
 #### 3.3.3 只读readOnly
 
-​	如果事务中的操作都是读操作，没涉及到对数据的写操作可以设置readOnly为true。这样可以提高效率。
+​ 如果事务中的操作都是读操作，没涉及到对数据的写操作可以设置readOnly为true。这样可以提高效率。
 
 ```java
 @Transactional(readOnly = true)
@@ -2329,4 +2194,3 @@ public void log() {
     int i = 1/0;
 }
 ```
-
