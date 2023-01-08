@@ -18,7 +18,14 @@ function sidebarJava() {
     },
     {
       text: 'Spring全家桶',
-      items: [{ text: 'Spring Security ➕ JWT', link: '/java/springSecurity+jwt' }]
+      items: [{ text: 'Spring Security ➕ JWT', link: '/java/spring/springSecurity+jwt' },
+      { text: 'SpringFrameword', link: '/java/spring/Spring' },
+      { text: 'SpringMvc', link: '/java/spring/SpringMVC' },
+      { text: 'SpringBoot', link: '/java/spring/SpringBoot' },
+      { text: 'SSM整合', link: '/java/spring/SSM整合' },
+        { text: 'Mybatis', link: '/java/spring/Mybatis' },
+        { text: 'MyBatis Plus', link: '/java/spring/MybatisPlus' }
+      ]
     }
   ]
 }

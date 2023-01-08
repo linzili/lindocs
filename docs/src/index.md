@@ -21,6 +21,7 @@ features:
   - icon: 📓
     title: 前端学习
     details: 掌握HTML、CSS、JavaScript，正在学习 VUE3➕TypeScript➕Pinia
+    link: /frontend/vue/quick-start
   - icon: 🚩
     title: JAVA深度学习
     details: 从初出茅庐到掌握各种类型编程，保障代码质量。
