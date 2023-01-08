@@ -2,9 +2,7 @@
 
 ## 1.框架
 
-​	框架相当于是一个脚手架，内部已经写好了很多代码，我们只要在其基础上进行开发就可以提高我们的开发效率。
-
-
+​ 框架相当于是一个脚手架，内部已经写好了很多代码，我们只要在其基础上进行开发就可以提高我们的开发效率。
 
 框架阶段学习：
 
@@ -18,9 +16,7 @@
 
 - MyBatis是一款优秀的持久层框架。
 - MyBatis免除了几乎所有的JDBC代码以及设置参数和获取结果集的工作。
-- 官网https://mybatis.org/mybatis-3/zh/#
-
-
+- 官网<https://mybatis.org/mybatis-3/zh/>#
 
 ## 3.快速入门
 
@@ -142,15 +138,13 @@ public interface UserDao {
 
 Mybatis X 可以实现mapper和xml文件相互跳转
 
-
-
 ## 4. 参数获取
 
 ### 4.1 一个参数
 
 #### 4.1.1 基本参数
 
-​	我们可以使用#{}直接来取值，写任意名字都可以获取到参数。但是一般用方法的参数名来取。
+​ 我们可以使用#{}直接来取值，写任意名字都可以获取到参数。但是一般用方法的参数名来取。
 
 例如：
 
@@ -168,7 +162,7 @@ xml中内容如下：
 
 #### 4.1.2 POJO
 
-​	我们可以使用POJO中的属性名来获取对应的值。
+​ 我们可以使用POJO中的属性名来获取对应的值。
 
 例如：
 
@@ -185,8 +179,6 @@ xml中内容如下：
         select * from user where id = #{id} and username = #{username} and age = #{age} and address = #{address}
     </select>
 ```
-
-
 
 #### 4.1.3 Map
 
@@ -219,8 +211,6 @@ xml中内容如下：
         userDao.findByMap(map);
 ```
 
-
-
 ### 4.2 多个参数
 
 Mybatis会把多个参数放入一个Map集合中，默认的key是argx和paramx这种格式。
@@ -239,9 +229,7 @@ User findByCondition(Integer id,String username);
 {arg1 = PDD,arg0 = 2,param1 = 2,param2 = PDD}
 ```
 
-
-
-​	我们虽然可以使用对应的默认key来获取值，但是这种方式可读性不好。我们一般在方法前使用@param来设置参数名。
+​ 我们虽然可以使用对应的默认key来获取值，但是这种方式可读性不好。我们一般在方法前使用@param来设置参数名。
 
 例如：
 
@@ -265,13 +253,9 @@ User findByCondition(@Param("id") Integer id,@Param("username") String username)
 </select>
 ```
 
-
-
 ### 4.3 总结
 
-​	建议如果只有一个参数的时候不用做什么特殊处理。如果是有多个参数的情况下一定要加上@Param来设置参数名。
-
-
+​ 建议如果只有一个参数的时候不用做什么特殊处理。如果是有多个参数的情况下一定要加上@Param来设置参数名。
 
 ## 5.核心类
 
@@ -287,11 +271,9 @@ SqlSession openSession();
 SqlSession openSession(boolean autoCommit);
 ```
 
-
-
 ### 5.2 SqlSession
 
-​	SqlSession提供了在数据库执行SQL命令所需要的所有方法。它还提供了事物的相关操作。
+​ SqlSession提供了在数据库执行SQL命令所需要的所有方法。它还提供了事物的相关操作。
 
 成员方法如下：
 
@@ -301,8 +283,6 @@ void commit();//提交事务
 void rollback();//回滚事务
 void close();//释放资源
 ```
-
-
 
 ## 6.Mybatis实现增删改查
 
@@ -318,7 +298,7 @@ void insertUser(User user);
 
 ```xml
 <insert id = "insertUser">
-	insert into user values(null,k#{username},#{age},#{address})
+ insert into user values(null,k#{username},#{age},#{address})
 </insert>
 ```
 
@@ -336,7 +316,7 @@ void deleteById(Integer id);
 
 ```xml
 <delete id = "deleteById">
-	delete from user where id = #{id}
+ delete from user where id = #{id}
 </delete>
 ```
 
@@ -355,7 +335,7 @@ void updateUser(User user);
 ```xml
 <!--更新用户-->
 <update id ="updateUser">
-	UPDATE USER SET age = #{age} , username = #{username},address = #{address} WHERE id = #{id}
+ UPDATE USER SET age = #{age} , username = #{username},address = #{address} WHERE id = #{id}
 </update>
 ```
 
@@ -373,7 +353,7 @@ User findById(Integer id);
 
 ```xml
 <select id="findById" resultType="com.dunxi.pojo.User">
-	select * from user where id =#{id}
+ select * from user where id =#{id}
 </select>
 ```
 
@@ -385,29 +365,25 @@ User findById(Integer id);
 List<User> findAll();
 ```
 
-
-
 ②映射文件UserDao.xml增加响应的标签
 
 ```xml
 <select id="findAll" resultType="com.dunxi.pojo.User">
-	select * from user
+ select * from user
 </select>
 ```
-
-
 
 ## 7.配置文件详解
 
 ### 7.1 properties
 
-​	可以使用properties读取properties配置文件。使用其中的resource属性来设置配置文件的路径。然后使用${key}来获取配置文件中的值
+​ 可以使用properties读取properties配置文件。使用其中的resource属性来设置配置文件的路径。然后使用${key}来获取配置文件中的值
 
 例如：
 
 在resources目录下有jdbc.properties文件，内容如下
 
-``` 
+```
 jdbc.url=jdbc:mysql://localhost:3306/mybatis_db
 jdbc.driver=com.mysql.jdbc.Driver
 jdbc.username=root
@@ -442,11 +418,9 @@ jdbc.password=123456
 </configuration>
 ```
 
-
-
 ### 7.2 settings
 
-​	可以使用该标签来进行一些设置
+​ 可以使用该标签来进行一些设置
 
 例如：
 
@@ -457,27 +431,25 @@ jdbc.password=123456
 </settings>
 ```
 
-具体的设置参考：https://mybatis.org/mybatis-3/zh/configuration.html#settings
+具体的设置参考：<https://mybatis.org/mybatis-3/zh/configuration.html#settings>
 
 ### 7.3 typeAliases
 
-​	可以用来设置给全类名设置别名，简化书写。一般设置一个包下的类全部有默认别名。莫默认别名是类名首字母小写。例如：com.dunxi.pojo.User别名为user
+​ 可以用来设置给全类名设置别名，简化书写。一般设置一个包下的类全部有默认别名。莫默认别名是类名首字母小写。例如：com.dunxi.pojo.User别名为user
 
-``` 
+```
 <typeAliases>
-	<package name="com.dunxi.dao"></package>
+ <package name="com.dunxi.dao"></package>
 </typeAliases>
 ```
 
-
-
 ### 7.4 environments
 
-​	配置数据库相关的环境，例如事务管理器，连接池相关参数等。
+​ 配置数据库相关的环境，例如事务管理器，连接池相关参数等。
 
 ```xml
     <!--设置默认环境-->
-	<environments default="development">
+ <environments default="development">
         <!--设置该环境的唯一标识-->
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -492,13 +464,11 @@ jdbc.password=123456
     </environments>
 ```
 
-
-
 ### 7.5 mappers
 
-​	该标签的作用是加载映射的，加载方式有如下几种（**主要使用的是第四种**）：
+​ 该标签的作用是加载映射的，加载方式有如下几种（**主要使用的是第四种**）：
 
-​	①使用相对于类名路径的资源引用，例如：
+​ ①使用相对于类名路径的资源引用，例如：
 
 ```xml
 <!-- 使用相对于类路径的资源引用 -->
@@ -540,13 +510,11 @@ jdbc.password=123456
 </mappers>
 ```
 
-
-
 ## 8.打印日志
 
 ①log4j配置 在resources目录下创建log4j.properties文件，内容如下：
 
-``` 
+```
 ### direct log messages to stdout ###
 log4j.appender.stdout=org.apache.log4j.ConsoleAppender
 log4j.appender.stdout.Target=System.out
@@ -574,12 +542,11 @@ log4j.rootLogger=debug, stdout
         </dependency>
 ```
 
-
 ## 9.获取参数时#{}和${}的区别（面试问题）
 
-​	如果使用#{}他是预编译的sql可以防止SQL注入攻击
+​ 如果使用#{}他是预编译的sql可以防止SQL注入攻击
 
-​	如果使用${}他是直接把参数值拿来进行拼接，这样会有SQL注入的风险
+​ 如果使用${}他是直接把参数值拿来进行拼接，这样会有SQL注入的风险
 
 如果使用的是#{}来获取参数值日志如下：
 
@@ -598,17 +565,16 @@ Preparing: select * from user where id = 2 and username = 快乐风男 and age =
 
  `$` 符号大括号可以用来动态变换表名，提供给管理员来使用，不要提供给普通用户来使用，不然还是会有SQL注入的风险的。
 
-
-
 ## Mybatis-02
 
 ## 1.注解开发
 
-​	我们也可以使用注解的形式来进行开发，用注解来替换掉xml。使用注解来映射简单语句会使代码显得更加简洁，但对于稍微复杂的语句，Java注解不仅力不从心，还会让你本就复杂的SQL语句更加混乱不堪。所以我们在实际企业开发中一般都是使用xml的形式。
+​ 我们也可以使用注解的形式来进行开发，用注解来替换掉xml。使用注解来映射简单语句会使代码显得更加简洁，但对于稍微复杂的语句，Java注解不仅力不从心，还会让你本就复杂的SQL语句更加混乱不堪。所以我们在实际企业开发中一般都是使用xml的形式。
 
 ### 1.1 步骤
 
 ①在核心配置文件中配置mapper接口所在的包名
+
 ``` xml
 <mappers>
   <package name="com.dunxi.dao"></package>
@@ -669,15 +635,13 @@ public interface UserDao {
     }
 ```
 
-
-
 # 2.动态SQL
 
-​	在实际开发中的SQL语句没有之前那么简单，很多时候需要根据传入的参数情况动态生成SQL语句。Mybatis提供了动态SQL相关的标签让我们使用。
+​ 在实际开发中的SQL语句没有之前那么简单，很多时候需要根据传入的参数情况动态生成SQL语句。Mybatis提供了动态SQL相关的标签让我们使用。
 
-### 	2.1 if
+### 2.1 if
 
-​		可以使用if标签进行条件判断，条件成立才会把if标签中的内容拼接到SQL语句中。
+​  可以使用if标签进行条件判断，条件成立才会把if标签中的内容拼接到SQL语句中。
 
 例如：
 
@@ -696,23 +660,19 @@ public interface UserDao {
 
 **注意：在test属性中表示参数的时候不需要写#{},写了会出问题。**
 
-
-
 ### 2.2 trim
 
-​	可以使用该标签动态的添加前缀或后缀，也可以使用该标签动态的消除前缀。
-
-
+​ 可以使用该标签动态的添加前缀或后缀，也可以使用该标签动态的消除前缀。
 
 2.2.1prefixOverrides属性
 
-​	用来设置需要被清除的前缀，多个值可以用|分隔，注意|前后不要有空格。例如:and|or
+​ 用来设置需要被清除的前缀，多个值可以用|分隔，注意|前后不要有空格。例如:and|or
 
 例如：
 
 ```xml
 <select id="findByCondition" resultType="con.dunxi.pojo.User">
-	select * from user
+ select * from user
     <trim prefixOverrides="and|or">
         and
     </trim>
@@ -721,62 +681,54 @@ public interface UserDao {
 
 最终执行的sql为： select * from user
 
-
-
 ### 2.2.2 suffixOverrides属性
 
-​	用来设置需要被清除的后缀，多个值可以用|分隔，注意|前后不要有空格。例如：and|or
+​ 用来设置需要被清除的后缀，多个值可以用|分隔，注意|前后不要有空格。例如：and|or
 
 例如：
 
 ```xml
 <select id="findByCondition" resultType="com.dunxi.pojo.User">
-	select * from user
+ select * from user
     <trim suffixOverrides="and|or">
-    	id = #{id} and
+     id = #{id} and
     </trim>
 </select>
 ```
 
 最终执行的SQL为: select * from user 去掉了后缀and
 
-
-
 ### 2.2.3prefix属性
 
-​	用来设置动态添加的前缀，如果标签中有内容就会添加上设置的前缀，如果标签中没有内容就不会添加上设置的前缀
+​ 用来设置动态添加的前缀，如果标签中有内容就会添加上设置的前缀，如果标签中没有内容就不会添加上设置的前缀
 
 例如：
 
 ```xml
 <select id="findBYCondition" resultType="com.dunxi.pojo.User">
-	select * from user
+ select * from user
     <trim prefix="where" >
-    	1=1
+     1=1
     </trim>
 </select>
 ```
 
 最终执行的SQL为：select * from user where 1= 1 动态增加了前缀where
 
-
-
 ### 2.2.4suffix属性
 
-​	用来设置动态添加的后缀，如果标签中有内容就会添加上设置的后缀，如果标签中没有内容就不会添加上设置的后缀
+​ 用来设置动态添加的后缀，如果标签中有内容就会添加上设置的后缀，如果标签中没有内容就不会添加上设置的后缀
 
 ```xml
 <select id="findBYCondition" resultType="com.dunxi.pojo.User">
-	select * from user
+ select * from user
     <trim suffix="1=1" >
-    	where
+     where
     </trim>
 </select>
 ```
 
 最终执行的SQL为：select * from user where 1=1 动态增加了后缀1=1
-
-
 
 2.2.5 动态添加前缀where并且消除and或者or
 
@@ -800,19 +752,17 @@ User findByCondition(@Param("id") Integer id,@Param("username") String username)
 
 调用方法的时候如果传入的id和username为null则SQL为： **select * from user**
 
-调用方法的时候如果传入的id为null，username不为null，则执行的SQL为: **select * from user where username = ?** 
-
-
+调用方法的时候如果传入的id为null，username不为null，则执行的SQL为: **select * from user where username = ?**
 
 ### 2.2 where
 
-​	where标签等价于：
+​ where标签等价于：
 
 ```xml
 <trim prefix="where" prefixOverrides="and|or"></trim>
 ```
 
-​	可以使用where标签动态的拼接where并且去处前缀的and或者or。
+​ 可以使用where标签动态的拼接where并且去处前缀的and或者or。
 
 例如：
 
@@ -836,19 +786,17 @@ User findByCondition(@Param("id") Integer id,@Param("username") String username)
 
 调用方法的时候如果传入的id和username为null则SQL为： **select * from user**
 
-调用方法的时候如果传入的id为null，username不为null，则执行的SQL为: **select * from user where username = ?** 
-
-
+调用方法的时候如果传入的id为null，username不为null，则执行的SQL为: **select * from user where username = ?**
 
 ### 2.3 set
 
-​	set标签等价于
+​ set标签等价于
 
 ```xml
 <trim prefix"set" suffixOverrides","></trim>
 ```
 
-​	可以使用set标签动态的拼接set并且去处后缀的逗号。
+​ 可以使用set标签动态的拼接set并且去处后缀的逗号。
 
 例如：
 
@@ -872,11 +820,9 @@ User findByCondition(@Param("id") Integer id,@Param("username") String username)
 
 如果调用方法时传入的User对象的id为2，username不为null，其他属性都为null则最终执行的SQL为：update user set username = ? where id = ?
 
-
-
 ### 2.4 foreach
 
-​	可以使用foreach标签遍历集合或者数组类型的参数，获取其中元素拿来动态的拼接SQL语句。
+​ 可以使用foreach标签遍历集合或者数组类型的参数，获取其中元素拿来动态的拼接SQL语句。
 
 例如：
 
@@ -918,11 +864,9 @@ select * from User where id in(? , ? , ? , ?)
 
 **注意：如果方法参数是数组类型，默认的参数名是array，如果方法参数是list集合默认参数名是list。建议遇到数组或者集合类型的参数统一使用@Param注解进行命名。**
 
-
-
 ### 2.5 choose、when、otherwise
 
-​	当我们不想使用所有的条件，而只是想从多个条件中选择一个使用时。可以使用shoose系列标签。类似于java中的switch。
+​ 当我们不想使用所有的条件，而只是想从多个条件中选择一个使用时。可以使用shoose系列标签。类似于java中的switch。
 
 例如：
 
@@ -934,13 +878,11 @@ LIst<User> selectChose(User user)
 
 期望：
 
-​		如果user对象的id不为空时就通过id查询。
+​  如果user对象的id不为空时就通过id查询。
 
-​		如果id为null，username不为null就通过username查询。
+​  如果id为null，username不为null就通过username查询。
 
-​		如果id和username都为null就查询id为3的用户。
-
-
+​  如果id和username都为null就查询id为3的用户。
 
 xml映射文件如下：
 
@@ -971,11 +913,9 @@ xml映射文件如下：
 
   一个choose标签中最多只会有一个when中的判断成立。从上到下去进行判断。如果成立了就把标签体的内容拼接到SQL中，并且不会进行其他when的判断和拼接。如果所有的when都不成立则拼接otherwise中的语句。
 
-
-
 ## 3.SQL片段抽取
 
-​	我们在xml映射文件中编写SQL语句的时候可能会遇到重复的SQL片段。这种SQL片段我们可以使用SQL标签来进行抽取。然后在需要使用的时候用include标签进行使用。
+​ 我们在xml映射文件中编写SQL语句的时候可能会遇到重复的SQL片段。这种SQL片段我们可以使用SQL标签来进行抽取。然后在需要使用的时候用include标签进行使用。
 
 例如：
 
@@ -987,8 +927,6 @@ xml映射文件如下：
 ```
 
 **最终执行的SQL为：select id,username,age,address from user**
-
-
 
 # Mybatis-03
 
@@ -1145,7 +1083,7 @@ public class Order {
                 ", userId=" + userId +
                 '}';
     }
-  	public Order() {
+   public Order() {
     }
     public Integer getId() {
         return id;
@@ -1198,8 +1136,6 @@ public class Order {
 
 ```
 
-
-
 #### 0.2.3 Role.java
 
 ```java
@@ -1216,7 +1152,7 @@ public class Role {
                 ", desc='" + desc + '\'' +
                 '}';
     }
-	public Role() {
+ public Role() {
     }
     public Integer getId() {
         return id;
@@ -1251,13 +1187,11 @@ public class Role {
 
 ```
 
-
-
 ## 1. ResultMap
 
 ### 1.1 基本使用
 
-​	我们可以使用resultMap标签自定义结果集和实体类属性的映射规则。
+​ 我们可以使用resultMap标签自定义结果集和实体类属性的映射规则。
 
 ```xml
 <!--
@@ -1287,11 +1221,9 @@ public class Role {
 </select>
 ```
 
-
-
 ### 1.2 自动映射
 
-​	我们定义resultMap时默认情况下自动映射是开启状态的。也就是如果结果集的列名和我们的属性名相同是会自动映射的我们只需要写特殊情况的映射关系即可。
+​ 我们定义resultMap时默认情况下自动映射是开启状态的。也就是如果结果集的列名和我们的属性名相同是会自动映射的我们只需要写特殊情况的映射关系即可。
 
 例如：
 
@@ -1311,7 +1243,7 @@ public class Role {
 </select>
 ```
 
-​	如果有需要可以选择关闭自动映射,可以把resultMap的autoMapping属性设置为false。
+​ 如果有需要可以选择关闭自动映射,可以把resultMap的autoMapping属性设置为false。
 
 例如：
 
@@ -1325,11 +1257,9 @@ public class Role {
 </select>
 ```
 
-
-
 ### 1.3 继承映射关系
 
-​	我们可以使用resultMap的extends属性来指定一个resultMap，从而复用重复的映射关系配置。
+​ 我们可以使用resultMap的extends属性来指定一个resultMap，从而复用重复的映射关系配置。
 
 例如：
 
@@ -1346,23 +1276,19 @@ public class Role {
 </resultMap>
 ```
 
-
-
 ## 2.多表查询
 
-​	有时候我们需要查询多张表的数据才可以得到我们要的结果。
+​ 有时候我们需要查询多张表的数据才可以得到我们要的结果。
 
-​	我们可以直接写一个多表关联的SQL进行查询。也可以分步进行多次的查询来拿到我们需要的结果。
+​ 我们可以直接写一个多表关联的SQL进行查询。也可以分步进行多次的查询来拿到我们需要的结果。
 
-​	Mybatis就提供了对应的配置，可以让我们去更方便的进行相应的查询和对应的结果集处理。
-
-
+​ Mybatis就提供了对应的配置，可以让我们去更方便的进行相应的查询和对应的结果集处理。
 
 ### 2.1 多表关联查询
 
 #### 2.1.1 一对一关系
 
-​	两个实体之间是一对一的关系。（例如我们需要查询订单，要求还需要下单用户的数据。这里的订单相对于用户是一对一的关系。）
+​ 两个实体之间是一对一的关系。（例如我们需要查询订单，要求还需要下单用户的数据。这里的订单相对于用户是一对一的关系。）
 
 例如：
 
@@ -1379,8 +1305,6 @@ Order findById(Integer id);
 private User user;
 ```
 
-
-
 SQL语句如下
 
 ```sql
@@ -1391,8 +1315,8 @@ SQL语句如下
     where
         o.`user_id` = u.`id`
         and o.id = 2
-	
-	
+ 
+ 
     SELECT
         o.id,o.`createtime`,o.`price`,o.`remark`,o.`user_id`,u.`id` uid,u.`username`,u.`age`,u.`address`
     FROM
@@ -1408,11 +1332,9 @@ SQL语句如下
 
 我们可以使用如下两种方式封装结果集
 
-
-
 ##### 2.1.1.1 使用ResultMap对所有字段进行映射
 
-​	可以使用ResultMap设置user对象的属性设置映射规则。
+​ 可以使用ResultMap设置user对象的属性设置映射规则。
 
 ①resultMap定义，主要是对user对象的属性设置映射规则
 
@@ -1454,11 +1376,9 @@ SQL语句如下
     </select>
 ```
 
-
-
 ##### 2.1.1.2 使用ResultMap中的association
 
-​	可以使用ResultMap中的字标签association来设置关联实体类的映射规则。
+​ 可以使用ResultMap中的字标签association来设置关联实体类的映射规则。
 
 ①定义resultMap
 
@@ -1500,11 +1420,9 @@ SQL语句如下
 </select>
 ```
 
-
-
 #### 2.1.2 一对多关系
 
-​		两个实体之间是一对多的关系。（例如我们需要查询用户，要求还需要该用户所具有的角色信息。这里的用户相对于角色是一对多的。）
+​  两个实体之间是一对多的关系。（例如我们需要查询用户，要求还需要该用户所具有的角色信息。这里的用户相对于角色是一对多的。）
 
 例如：
 
@@ -1526,27 +1444,23 @@ SQL语句如下
 
 ```sql
 SELECT 
-	u.`id`,u.`username`,u.`age`,u.`address`,r.id rid,r.name,r.desc
+ u.`id`,u.`username`,u.`age`,u.`address`,r.id rid,r.name,r.desc
 FROM 
-	USER u,user_role ur,role r
+ USER u,user_role ur,role r
 WHERE 
-	u.id=ur.user_id AND ur.role_id = r.id
-	AND u.id = 2
+ u.id=ur.user_id AND ur.role_id = r.id
+ AND u.id = 2
 ```
 
 结果集
 
 ![image-4](https://raw.githubusercontent.com/DunXi/zdx/main/img/202203051856087.png)
 
-
-
 我们可以使用如下方式封装结果集。
 
 ##### 2.1.2.1 使用ResultMap中的collection
 
-​	可以使用ResultMap中的字标签association来设置关联实体类的映射规则。
-
-
+​ 可以使用ResultMap中的字标签association来设置关联实体类的映射规则。
 
 ①定义ResultMap
 
@@ -1579,19 +1493,17 @@ WHERE
 
 ### 2.2 分步查询
 
-​	如果有需要多表查询的需求我们也可以选择用多次查询的方式来查询出我们想要的数据。Mybatis也提供了对应的配置。
+​ 如果有需要多表查询的需求我们也可以选择用多次查询的方式来查询出我们想要的数据。Mybatis也提供了对应的配置。
 
-​	例如我们需要查询用户，要求还需要查询出该用户所具有的角色信息。我们可以选择先查询User表查询用户信息，然后再去查询关联角色的信息。
+​ 例如我们需要查询用户，要求还需要查询出该用户所具有的角色信息。我们可以选择先查询User表查询用户信息，然后再去查询关联角色的信息。
 
 #### 2.2.1 实现步骤
 
-​	具体步骤如下：
+​ 具体步骤如下：
 
 ##### ①定义查询方法
 
-​	因为我们需要分两步查询：1.查询User 2.根据用户的id查询Role 所以我们需要定义下面两个方法，并且把对应的标签也先写好。
-
-
+​ 因为我们需要分两步查询：1.查询User 2.根据用户的id查询Role 所以我们需要定义下面两个方法，并且把对应的标签也先写好。
 
 1.查询User
 
@@ -1603,7 +1515,7 @@ User findByUsername(String username);
 ```xml
 <!--根据用户名查询用户-->
 <select id="findByUsername" resultType="com.dunxi.pojo.User">
-	select id,username,age,address from user where username = #{username}
+ select id,username,age,address from user where username = #{username}
 </select>
 ```
 
@@ -1631,7 +1543,7 @@ public interface RoleDao{
 
 ##### ②配置分步查询
 
-​	我们期望的效果是调用findByUsername方法查询出来的结果中就包含角色的信息。所以我们可以设置findByUsername方法的ResultMap，指定分步查询
+​ 我们期望的效果是调用findByUsername方法查询出来的结果中就包含角色的信息。所以我们可以设置findByUsername方法的ResultMap，指定分步查询
 
 ```xml
 <!--定义User基本属性映射规则-->
@@ -1666,19 +1578,15 @@ public interface RoleDao{
     </select>
 ```
 
-
-
 #### 2.2.2 设置按需加载
 
-​	我们可以设置按需加载，这样在我们代码中需要用到关联数据的时候才会去查询关联数据。
+​ 我们可以设置按需加载，这样在我们代码中需要用到关联数据的时候才会去查询关联数据。
 
-​	有两种方式可以配置分别是全局配置和局部配置
-
-
+​ 有两种方式可以配置分别是全局配置和局部配置
 
 1. 局部配置
 
-​	设置fetchType属性为lazy
+​ 设置fetchType属性为lazy
 
 ```xml
  <!--
@@ -1709,20 +1617,16 @@ public interface RoleDao{
     </settings>
 ```
 
-
-
 ## 3.分页查询-PageHelper
 
-​	我们可以使用PageHelper非常方便的帮我们实现分页查询的需求。不需要自己在SQL中拼接SQL相关参数，并且能非常方便的获取总页数总条数等分页相关数据。
-
-
+​ 我们可以使用PageHelper非常方便的帮我们实现分页查询的需求。不需要自己在SQL中拼接SQL相关参数，并且能非常方便的获取总页数总条数等分页相关数据。
 
 ### 3.1 实现步骤
 
-#### ①定义方法查询方法以及生成对应标签	
+#### ①定义方法查询方法以及生成对应标签 
 
 ```java
-	List<User> findAll();
+ List<User> findAll();
 ```
 
 ```xml
@@ -1775,34 +1679,31 @@ System.out.println("总页数："+pageInfo.getPages());
 System.out.println("当前页："+pageInfo.getPageNum());
 System.out.println("每页显示长度："+pageInfo.getPageSize());
 ```
+
 ### 3.2 一对多多表查询分页问题
 
-​	我们在进行一对多的多表查询的时候，如果使用了PageHelper进行分页。会出现关联数据不全的情况。我们可以使用分步查询的方式来解决该问题。
-
-
+​ 我们在进行一对多的多表查询的时候，如果使用了PageHelper进行分页。会出现关联数据不全的情况。我们可以使用分步查询的方式来解决该问题。
 
 ## 4.Mybatis缓存
 
-​	Mybatis的缓存其实就是把之前查到的数据存入内存(map) ,瑕疵如果还是查询相同的东西，就可以直接从缓存中取，从而提高效率。
+​ Mybatis的缓存其实就是把之前查到的数据存入内存(map) ,瑕疵如果还是查询相同的东西，就可以直接从缓存中取，从而提高效率。
 
-​	Mybatis有一级缓存和二级缓存之分，一级缓存（默认开启）是sqlsession级别的缓存。二级缓存相当于mapper级别的缓存。
-
-
+​ Mybatis有一级缓存和二级缓存之分，一级缓存（默认开启）是sqlsession级别的缓存。二级缓存相当于mapper级别的缓存。
 
 ### 4.1 一级缓存
 
 几种不会使用一级缓存的情况
 
-	1. 调用相同的方法但是传入的参数值不同
- 	2. 调用相同的方法参数也相同，但是使用的是另外一个sqlSession上的缓存
- 	3. 如果查询完后，对一个表进行了增，删改操作，都会情况这sqlSession上的缓存
- 	4. 如果手动调用SqlSession的clearCache方法清除缓存了，后面也是用不了缓存
+ 1. 调用相同的方法但是传入的参数值不同
+  2. 调用相同的方法参数也相同，但是使用的是另外一个sqlSession上的缓存
+  3. 如果查询完后，对一个表进行了增，删改操作，都会情况这sqlSession上的缓存
+  4. 如果手动调用SqlSession的clearCache方法清除缓存了，后面也是用不了缓存
 
 ![image-20220308171152320](https://raw.githubusercontent.com/DunXi/zdx/main/img/202203081711936.png)
 
 ### 4.2 二级缓存
 
-​	注意：只在sqlsession调用了close或者commit后的数据才会进入二级缓存。
+​ 注意：只在sqlsession调用了close或者commit后的数据才会进入二级缓存。
 
 #### 4.2.1 开启二级缓存
 
@@ -1816,7 +1717,6 @@ System.out.println("每页显示长度："+pageInfo.getPageSize());
 </settings>
 ```
 
-
 ②局部开启
 
 在要开启二级缓存的mapper映射文件中设置cache标签
@@ -1829,8 +1729,6 @@ System.out.println("每页显示长度："+pageInfo.getPageSize());
 </mapper>
 ```
 
-
-
 #### 4.2.2 使用建议
 
-​	二级缓存在实际开发中基本不会使用。
+​ 二级缓存在实际开发中基本不会使用。
