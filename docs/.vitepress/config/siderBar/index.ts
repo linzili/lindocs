@@ -18,7 +18,7 @@ function sidebarJava() {
     },
     {
       text: 'Spring全家桶',
-      items: [{ text: 'Spring Security ➕ JWT', link: '/java/spring/springSecurityjwt' },
+      items: [{ text: 'Spring Security ➕ JWT', link: '/java/spring/springSecurityJwt' },
       { text: 'SpringFrameword', link: '/java/spring/Spring' },
       { text: 'SpringMvc', link: '/java/spring/SpringMVC' },
       { text: 'SpringBoot', link: '/java/spring/SpringBoot' },
