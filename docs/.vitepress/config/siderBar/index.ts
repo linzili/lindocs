@@ -17,6 +17,10 @@ function sidebarJava() {
       items: [{ text: 'java基础', link: '/java/java-base' }]
     },
     {
+      text: 'Gradle',
+      items: [{ text: 'Gradle', link: '/java/Gradle' }]
+    },
+    {
       text: 'Spring全家桶',
       items: [{ text: 'Spring Security ➕ JWT', link: '/java/spring/springSecurityJwt' },
       { text: 'SpringFrameword', link: '/java/spring/Spring' },
