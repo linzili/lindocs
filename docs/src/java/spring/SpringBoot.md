@@ -1018,7 +1018,7 @@ public class TestController {
 }
 ~~~~
 
-​ 
+​
 
 ​ 如果是要求**不能有code**这个参数可以把改成如下形式
 
@@ -1034,7 +1034,7 @@ public class TestController {
 }
 ~~~~
 
-​ 
+​
 
 ​ 如果要求有code这参数，并且这参数值必须**是某个值**可以改成如下形式
 
@@ -1050,7 +1050,7 @@ public class TestController {
 }
 ~~~~
 
-​ 如果要求有code这参数，并且这参数值必须**不是某个值**可以改成如下形式 
+​ 如果要求有code这参数，并且这参数值必须**不是某个值**可以改成如下形式
 
 ~~~~java
 @RestController
@@ -1068,7 +1068,7 @@ public class TestController {
 
 ​ 我们可以使用headers属性来对请求头进行一些限制。
 
-例如： 
+例如：
 
 ​ 我们期望让请求的资源路径为/test/testHeaders的GET请求，并且请求头中具有deviceType的请求能够被testHeaders方法处理。则可以写如下代码
 
@@ -1261,7 +1261,7 @@ public class User {
 
 ~~~~
 
-​ 
+​
 
 2.获取参数封装成Map集合
 
@@ -2457,7 +2457,7 @@ spring:
     }
 ```
 
-# SpringBoot源码学习
+## SpringBoot源码学习
 
 ![image-20221022160547968](https://bed-1309358403.cos.ap-shanghai.myqcloud.com/img/image-20221022160547968.png)
 

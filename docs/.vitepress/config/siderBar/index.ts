@@ -33,6 +33,15 @@ function sidebarJava() {
     }
   ]
 }
+
+function sidebarSpring() {
+  return [
+    {
+      text: 'springcloud',
+      items: [{ text: 'nacos', link: '/spring/springcloud/nacos' }]
+    }
+  ]
+}
 function sidebarFrontend() {
   return [
     {
@@ -52,5 +61,6 @@ function sidebarFrontend() {
 export default {
   '/database/': sidebarDatabase(),
   '/java/': sidebarJava(),
-  '/frontend/': sidebarFrontend()
+  '/frontend/': sidebarFrontend(),
+  '/spring': sidebarSpring()
 }
