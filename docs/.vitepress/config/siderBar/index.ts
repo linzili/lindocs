@@ -27,8 +27,8 @@ function sidebarJava() {
       { text: 'SpringMvc', link: '/java/spring/SpringMVC' },
       { text: 'SpringBoot', link: '/java/spring/SpringBoot' },
       { text: 'SSM整合', link: '/java/spring/SSM整合' },
-        { text: 'Mybatis', link: '/java/spring/Mybatis' },
-        { text: 'MyBatis Plus', link: '/java/spring/MybatisPlus' }
+      { text: 'Mybatis', link: '/java/spring/Mybatis' },
+      { text: 'MyBatis Plus', link: '/java/spring/MybatisPlus' }
       ]
     }
   ]
@@ -38,7 +38,13 @@ function sidebarSpring() {
   return [
     {
       text: 'springcloud',
-      items: [{ text: 'nacos', link: '/spring/springcloud/nacos' }]
+      items: [{ text: 'nacos', link: '/spring/springcloud/nacos' },
+      { text: 'sentinel', link: '/spring/springcloud/sentinel' },
+      { text: 'gateway', link: '/spring/springcloud/springcloudgateway' }]
+    },
+    {
+      text: 'springboot',
+      items: [{ text: 'springboot', link: '/spring/springboot/springboot' }]
     }
   ]
 }
