@@ -46,7 +46,7 @@ java -Dserver.port=8090 -jar sentinel-dashboard-1.8.1.jar
 
 3）访问
 
-访问[http://localhost:8080](http://localhost:8080)页面，就可以看到sentinel的控制台了：
+访问<a href="http://localhost:8080" target="_blank" rel="noreferrer">http://localhost:8080</a>页面，就可以看到sentinel的控制台了：
 
 ![image-20210715190827846](https://cdn.azhiyuan.com.cn/markdown/img/2023/01/13/20230113183309.png)
 
@@ -535,7 +535,7 @@ spring:
 
 接下来，我们添加一个授权规则，放行origin值为gateway的请求。
 
-![image-20210716153250134](assets/image-20210716153250134.png)
+![image-20210716153250134](https://cdn.azhiyuan.com.cn/markdown/img/2023/01/13/20230113190738.png)
 
 配置如下：
 
