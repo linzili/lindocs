@@ -38,13 +38,13 @@ function sidebarSpring() {
   return [
     {
       text: 'springcloud',
-      items: [{ text: 'nacos', link: '/spring/springcloud/nacos' },
+      items: [{ text: 'nacos', link: '/spring/springcloud/nacos' }, { text: 'nacos', link: '/spring/springcloud/nacos' },
       { text: 'sentinel', link: '/spring/springcloud/sentinel' },
       { text: 'gateway', link: '/spring/springcloud/springcloudgateway' }]
     },
     {
       text: 'springboot',
-      items: [{ text: 'springboot', link: '/spring/springboot/springboot' }]
+      items: [{ text: 'springboot', link: '/spring/springboot/SpringBoot' }]
     }
   ]
 }
