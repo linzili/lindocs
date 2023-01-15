@@ -47,7 +47,7 @@ buildscript {//构建gradle脚本自身需要的资源，可以声明的资源�
 
 //全局配置，包括root和其子项目
 allprojects {
-    apply plugin: 'java'
+    apply plugin: 'java-library'
     group 'com.lin'
     version '1.0-SNAPSHOT'
     sourceCompatibility = 17//java版本
