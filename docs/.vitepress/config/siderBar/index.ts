@@ -22,13 +22,14 @@ function sidebarJava() {
     },
     {
       text: 'Spring全家桶',
-      items: [{ text: 'Spring Security ➕ JWT', link: '/java/spring/springSecurityJwt' },
-      { text: 'SpringFrameword', link: '/java/spring/Spring' },
-      { text: 'SpringMvc', link: '/java/spring/SpringMVC' },
-      { text: 'SpringBoot', link: '/java/spring/SpringBoot' },
-      { text: 'SSM整合', link: '/java/spring/SSM整合' },
-      { text: 'Mybatis', link: '/java/spring/Mybatis' },
-      { text: 'MyBatis Plus', link: '/java/spring/MybatisPlus' }
+      items: [
+        { text: 'Spring Security ➕ JWT', link: '/java/spring/springSecurityJwt' },
+        { text: 'SpringFrameword', link: '/java/spring/Spring' },
+        { text: 'SpringMvc', link: '/java/spring/SpringMVC' },
+        { text: 'SpringBoot', link: '/java/spring/SpringBoot' },
+        { text: 'SSM整合', link: '/java/spring/SSM整合' },
+        { text: 'Mybatis', link: '/java/spring/Mybatis' },
+        { text: 'MyBatis Plus', link: '/java/spring/MybatisPlus' }
       ]
     }
   ]
@@ -38,13 +39,17 @@ function sidebarSpring() {
   return [
     {
       text: 'springcloud',
-      items: [{ text: 'nacos', link: '/spring/springcloud/nacos' }, { text: 'nacos', link: '/spring/springcloud/nacos' },
-      { text: 'sentinel', link: '/spring/springcloud/sentinel' },
-      { text: 'gateway', link: '/spring/springcloud/springcloudgateway' }]
+      items: [
+        { text: 'SpringCloud', link: '/spring/springcloud/SpringCloud' },
+        { text: 'nacos', link: '/spring/springcloud/nacos' },
+        { text: 'sentinel', link: '/spring/springcloud/sentinel' },
+        { text: 'gateway', link: '/spring/springcloud/springcloudgateway' }
+      ]
     },
     {
       text: 'springboot',
-      items: [{ text: 'springboot', link: '/spring/springboot/SpringBoot' }]
+      items: [{ text: 'springboot', link: '/spring/springboot/SpringBoot' },
+        { text: 'rabbitMQ', link: '/spring/springboot/rabbitMQ' }]
     }
   ]
 }
