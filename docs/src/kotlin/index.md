@@ -1,8 +1,6 @@
-# Kotlin
+# Kotlin基础概念
 
-## basic
-
-### 程序入口点
+## 程序入口点
 
 Kotlin 应用程序的入口点是 `main` 函数
 
@@ -20,15 +18,15 @@ fun main(args: Array<String>) {
 }
 ```
 
-### 类型
+## 类型
 
-#### 基本类型
+### 基本类型
 
 >在 Kotlin 中，所有东西都是对象，在这个意义上讲可以在任何变量上调用成员函数与属性。一些类型可以有特殊的内部表示——例如，数字、字符以及布尔可以在运行时表示为原生类型值，但是对于用户来说，它们看起来就像普通的类。
 
-##### 数字
+#### 数字
 
-###### 整数类型
+#### 整数类型
 
 ::: tip
 当初始化一个没有显式指定类型的变量时，编译器会自动推断为足以表示该值的最小类型。
@@ -44,7 +42,7 @@ val oneLong = 1L // Long
 val oneByte: Byte = 1
 ```
 
-###### 浮点类型
+#### 浮点类型
 >
 >对于实数，Kotlin 提供了浮点类型 Float 与 Double 类型，遵循 IEEE 754 标准。 Float 表达 IEEE 754 单精度，而 Double 表达双精度。
 可以使用带小数部分的数字初始化 Double 与 Float 变量。 小数部分与整数部分之间用句点（ . ）分隔 对于以小数初始化的变量，编译器会推断为 Double 类型：
@@ -55,23 +53,24 @@ val pi = 3.14 // Double
 val oneDouble = 1.0 // Double
 ```
 
-::: kotlin
+``` kotlin
 val pi = 3.14 // Double
 // val one: Double = 1 // 错误：类型不匹配
 val oneDouble = 1.0 // Double
-:::
+```
 
 如需将一个值显式指定为 `Float` 类型，请添加 f 或 F 后缀。 如果这样的值包含多于 6～7
 位十进制数，那么会将其舍入：
-::: kotlin
+
+``` kotlin
 val e = 2.7182818284 // Double
 val eFloat = 2.7182818284f // Float，实际值为 2.7182817
-:::
+```
 
 与一些其他语言不同，Kotlin 中的数字没有隐式拓宽转换。 例如，具有 Double 参数的函数
 只能对 `Double` 值调用，而不能对 `Float` 、 `Int` 或者其他数字值调用：
 
-::: kotlin
+```kotlin
 fun main() {
     fun printDouble(d: Double) { print(d) }
     val i = 1
@@ -81,36 +80,39 @@ fun main() {
 // printDouble(i) // 错误：类型不匹配
 // printDouble(f) // 错误：类型不匹配
 }
-:::
+```
 
-##### 字符串
+#### 字符串
 >
 >字符串字面值可以包含模板表达式——一些小段代码，会求值并把结果合并到字符串中。 模板表达式以美元符（ $ ）开头，要么由一个的名称构成:
 
-::: kotlin
+``` kotlin
 fun main() {
 //sampleStart
   val i = 10
   println("i = $i") // 输出“i = 10”
 //sampleEnd
 }
-:::
+```
+
 要么是用花括号括起来的表达式:
-::: kotlin
+
+``` kotlin
 fun main() {
 //sampleStart
   val s = "abc"
   println("$s.length is ${s.length}") // 输出 "abc.length is 3"
 //sampleEnd
 }
-:::
+```
 
-### 流程控制
+## 流程控制
 
-#### if表达式
+### if表达式
 
 在 Kotlin 中， `if` 是一个表达式：它会返回一个值。 因此就不需要三元运算符`（ 条件 ? 然后: 否则 ）`，因为普通的 `if` 就能胜任这个角色。
-::: kotlin
+
+``` kotlin
 var max = a
 if (a < b) max = b
 
@@ -124,9 +126,11 @@ if (a > b) {
 
 // 作为表达式
 val max = if (a > b) a else b
-:::
+```
+
 `if` 表达式的分支可以是代码块，这种情况最后的表达式作为该块的值：
-::: kotlin
+
+``` kotlin
 val max = if (a > b) {
   print("Choose a")
   a
@@ -134,11 +138,11 @@ val max = if (a > b) {
   print("Choose b")
   b
 }
-:::
+```
 
-#### When 表达式
+### When 表达式
 
-::: kotlin
+``` kotlin
 when (x) {
   1 -> print("x == 1")
   2 -> print("x == 2")
@@ -146,7 +150,8 @@ when (x) {
     print("x is neither 1 nor 2")
   }
 }
-:::
+```
+
 `when`将它的参数与所有的分支条件顺序比较，直到某个分支满足条件。
 
 `when` 既可以作为表达式使用也可以作为语句使用。如果它被当做表达式， 第一个符合条件
@@ -155,7 +160,8 @@ when (x) {
 
 如果其他分支都不满足条件将会求值 `else` 分支。 如果 `when` 作为一个表达式使用，那么必
 须有 `else` 分支， 除非编译器能够检测出所有的可能情况都已经覆盖了， 例如，对于 `枚举（ enum ）类`条目与`密封（ sealed ）类`子类型］。
-::: kotlin
+
+``` kotlin
 enum class Bit {
   ZERO, ONE
 }
@@ -164,13 +170,35 @@ val numericValue = when (getRandomBit()) {
   Bit.ONE -> 1
   // 'else' is not required because all cases are covered
 }
-:::
+```
 
-### 包与导入
+## 包与导入
 
-### 类与对象
+## 类与对象
 
-#### 伴生对象
+### 委托
+>
+> 委托模式（delegation pattern）是软件设计模式中的一项基本技巧。在委托模式中，有两个对象参与处理同一个请求，接受请求的对象将请求委托给另一个对象来处理。委托模式是一项基本技巧，许多其他的模式，如状态模式、策略模式、访问者模式本质上是在更特殊的场合采用了委托模式。委托模式使得我们可以用聚合来替代继承，它还使我们可以模拟mixin。
+
+`Derived` 类可以通过将其所有公有成员都委托给指定对象来实现一个接口 Base ：
+
+``` kotlin
+interface Base {
+  fun print()
+}
+class BaseImpl(val x: Int) : Base {
+  override fun print() { print(x) }
+}
+class Derived(b: Base) : Base by b
+fun main() {
+  val b = BaseImpl(10)
+  Derived(b).print()
+}
+```
+
+`Derived` 的超类型列表中的 by 子句
+
+### 伴生对象
 
 > kotlin通过引入“伴生对象”的概念来替代java里的静态变量及方法。
 
@@ -188,13 +216,13 @@ class StaticTest {
 }
 ```
 
-### 函数
+## 函数
 
-#### 基本使用
+### 基本使用
 
-### Spring
+## Spring
 
-#### 自动注入
+### 自动注入
 
 ``` kotlin 3
 class TestClass (

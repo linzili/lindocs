@@ -69,9 +69,22 @@ function sidebarFrontend() {
     }
   ]
 }
+
+function sidebarNetwork() {
+  return [
+
+    {
+      text: 'NetWork',
+      items: [
+        { text: 'IPV6', link: '/network/IPV6' }
+      ]
+    }
+  ]
+}
 export default {
   '/database/': sidebarDatabase(),
   '/java/': sidebarJava(),
   '/frontend/': sidebarFrontend(),
-  '/spring': sidebarSpring()
+  '/spring': sidebarSpring(),
+  '/network': sidebarNetwork(),
 }

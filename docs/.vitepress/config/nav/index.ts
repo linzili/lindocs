@@ -3,5 +3,6 @@ export default [
   { text: '🔥数据库', link: '/database/mysql/mysql-base', activeMatch: '/database/' },
   { text: '🔥JAVA', link: '/java/java-base', activeMatch: '/java/' },
   { text: '🥳spring', link: '/spring/springcloud/SpringCloud', activeMatch: '/spring/' },
-  { text: '🥳kotlin', link: '/kotlin/', activeMatch: '/kotlin/' }
+  { text: '🥳kotlin', link: '/kotlin/', activeMatch: '/kotlin/' },
+  { text: 'network', link: '/network/IPV6', activeMatch: '/network/' }
 ]
