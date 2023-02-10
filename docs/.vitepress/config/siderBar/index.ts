@@ -76,7 +76,8 @@ function sidebarNetwork() {
     {
       text: 'NetWork',
       items: [
-        { text: 'IPV6', link: '/network/IPV6' }
+        { text: 'IPv6', link: '/network/IPV6' },
+        { text: 'Linux', link: '/network/Linux' }
       ]
     }
   ]
