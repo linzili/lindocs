@@ -82,10 +82,23 @@ function sidebarNetwork() {
     }
   ]
 }
+
+function sidebarFrameWork() {
+  return [
+
+    {
+      text: '架构师',
+      items: [
+        { text: '总体架构设计', link: '/framework/overall' }
+      ]
+    }
+  ]
+}
 export default {
   '/database/': sidebarDatabase(),
   '/java/': sidebarJava(),
   '/frontend/': sidebarFrontend(),
   '/spring': sidebarSpring(),
   '/network': sidebarNetwork(),
+  '/framework':sidebarFrameWork()
 }
